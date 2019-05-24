@@ -1,1 +1,3 @@
-# prog2
+# Vue Freaks Club
+This repo is our first approach to Vue ✌️
+

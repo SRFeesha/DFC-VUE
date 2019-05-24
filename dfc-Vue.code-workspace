@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../dfc-vue"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
