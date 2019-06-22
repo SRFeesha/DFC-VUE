@@ -1,18 +1,26 @@
 <template>
-  <div class="board">
-    <div class="arg">
-      <h3>{{ postits.board }}</h3>
-      <ul>
-        <li v-for="postit in speakers" :key="speakers.id">{{ postit.msg }}</li>
-      </ul>
-      <p class="addmore">+ add more post-it</p>
-    </div>
+  <div class="arg">
+    <h3>{{ arg }}</h3>
+    <ul>
+      <CardMini v-for="postit in chooseArg" :key="chooseArg.id" :cont="postit.msg"></CardMini>
+    </ul>
+    <Input/>
   </div>
 </template>
 
 <script>
+import CardMini from "./CardMini";
+import Input from "./Input";
+
 export default {
   name: "Board",
+  components: {
+    CardMini,
+    Input
+  },
+  props: {
+    arg: String
+  },
   data() {
     return {
       postits: [
@@ -54,21 +62,22 @@ export default {
       ]
     };
   },
+  methods: {},
   computed: {
-    speakers: function() {
-      return this.postits.filter(function(postit) {
-        return postit.board === "Speakers";
-      });
-    },
-    improvements: function() {
-      return this.postits.filter(function(postit) {
-        return postit.board === "Improvements";
-      });
-    },
-    topics: function() {
-      return this.postits.filter(function(postit) {
-        return postit.board === "Argomenti";
-      });
+    chooseArg: function() {
+      if (this.arg === "Speakers") {
+        return this.postits.filter(function(postit) {
+          return postit.board === "Speakers";
+        });
+      } else if (this.arg === "Improvements") {
+        return this.postits.filter(function(postit) {
+          return postit.board === "Improvements";
+        });
+      } else if (this.arg === "Argomenti") {
+        return this.postits.filter(function(postit) {
+          return postit.board === "Argomenti";
+        });
+      }
     }
   }
 };
@@ -76,21 +85,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
 ul {
   list-style-type: none;
   padding: 0;
-}
-.board {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  /* justify-content: space-around; */
-  align-self: baseline;
-  margin: 3rem;
 }
 .arg {
   box-sizing: border-box;
@@ -105,22 +102,9 @@ ul {
 h3 {
   padding: 1rem 4rem;
 }
-p {
+.addmore {
   padding: 0 4rem;
   /* font-style: italic; */
   color: #0000008c;
-}
-.arg > ul > li {
-  box-shadow: 0px 5px 30px 0px rgba(36, 36, 40, 0.1);
-  padding: 1rem 3rem;
-  margin: 1rem;
-  border-radius: 10px;
-  box-sizing: border-box;
-  transition: 0.3s ease-in;
-}
-.arg > ul > li:hover {
-  box-shadow: 0px 5px 60px 0px rgba(36, 36, 100, 0.2);
-  transform: scale(1.03);
-  transition: 0.1s ease-out;
 }
 </style>

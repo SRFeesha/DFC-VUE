@@ -1,102 +1,33 @@
 <template>
-  <div class="board">
-    <div class="arg">
-      <h3>Speakers</h3>
-      <ul>
-        <li v-for="postit in speakers" :key="speakers.id">{{ postit.msg }}</li>
-      </ul>
-      <p class="addmore">+ ADD MORE</p>
-    </div>
-    <div class="arg">
-      <h3>Improvements</h3>
-      <ul>
-        <li v-for="postit in improvements" :key="improvements.id">{{ postit.msg }}</li>
-      </ul>
-      <p class="addmore">+ Add more</p>
-    </div>
-    <div class="arg">
-      <h3>Topics</h3>
-      <ul>
-        <li v-for="postit in topics" :key="topics.id">{{ postit.msg }}</li>
-      </ul>
-      <p class="addmore">+ add more</p>
+  <div class="FreaksBoard">
+    <h1>Freaks Board</h1>
+    <div class="board">
+      <Board arg="Speakers"/>
+      <Board arg="Improvements"/>
+      <Board arg="Argomenti"/>
     </div>
   </div>
 </template>
 
 <script>
+import Board from "./Board";
+
 export default {
   name: "FreaksBoard",
-  data() {
-    return {
-      postits: [
-        {
-          id: 1,
-          board: "Improvements",
-          msg: "Aria condizionata pls!"
-        },
-        {
-          id: 2,
-          board: "Speakers",
-          msg: "Filippo Andolfatto"
-        },
-        {
-          id: 3,
-          board: "Speakers",
-          msg: "Paolo Spazzini"
-        },
-        {
-          id: 4,
-          board: "Argomenti",
-          msg: "Gradienti"
-        },
-        {
-          id: 5,
-          board: "Improvements",
-          msg: "più birra! 🍻"
-        },
-        {
-          id: 6,
-          board: "Improvements",
-          msg: "More design dollars"
-        },
-        {
-          id: 7,
-          board: "Improvements",
-          msg: "finire dopo le 11"
-        }
-      ]
-    };
-  },
-  computed: {
-    speakers: function() {
-      return this.postits.filter(function(postit) {
-        return postit.board === "Speakers";
-      });
-    },
-    improvements: function() {
-      return this.postits.filter(function(postit) {
-        return postit.board === "Improvements";
-      });
-    },
-    topics: function() {
-      return this.postits.filter(function(postit) {
-        return postit.board === "Argomenti";
-      });
-    }
+  components: {
+    Board
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
+h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 6rem;
+  color: #ffffffcc;
+  margin: 2rem 0;
 }
 .board {
   display: flex;
@@ -105,36 +36,5 @@ ul {
   /* justify-content: space-around; */
   align-self: baseline;
   margin: 3rem;
-}
-.arg {
-  box-sizing: border-box;
-  width: 25vw;
-  min-width: 300px;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 10px 60px 0px rgba(36, 36, 40, 0.25);
-  background-color: white;
-  margin: 1em;
-}
-h3 {
-  padding: 1rem 4rem;
-}
-p {
-  padding: 0 4rem;
-  /* font-style: italic; */
-  color: #0000008c;
-}
-.arg > ul > li {
-  box-shadow: 0px 5px 30px 0px rgba(36, 36, 40, 0.1);
-  padding: 1rem 3rem;
-  margin: 1rem;
-  border-radius: 10px;
-  box-sizing: border-box;
-  transition: 0.3s ease-in;
-}
-.arg > ul > li:hover {
-  box-shadow: 0px 5px 60px 0px rgba(36, 36, 100, 0.2);
-  transform: scale(1.03);
-  transition: 0.1s ease-out;
 }
 </style>

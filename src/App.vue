@@ -1,12 +1,10 @@
 <template>
   <div id="app">
-    <h1>Freaks Board</h1>
     <FreaksBoard/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
 import FreaksBoard from "./components/FreaksBoard";
 
 export default {
@@ -28,15 +26,7 @@ body {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
-}
-h1 {
-  text-align: center;
-  font-weight: 900;
-  font-size: 6rem;
-  color: #ffffffcc;
-  margin: 2rem 0;
 }
 </style>
