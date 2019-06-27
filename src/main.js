@@ -4,15 +4,37 @@ import Vue from "vue";
 import App from "./App";
 import { store } from "./store/store";
 import VueRouter from "vue-router";
+import Home from "./components/Home"; 
+import Schedule from "./components/Schedule"; 
+import Meetup from "./components/Meetup"; 
+import FreaksBoard from "./components/FreaksBoard"; 
+
 Vue.use(VueRouter);
 
 Vue.config.productionTip = false;
 
 const routes = [
-  { path: "/", component: require("./components/FreaksBoard.vue").default },
-  { path: "/board", component: require("./components/Board.vue") }
-  // { path: '/purchase', component: require('./page-2.vue').default }
-];
+  {
+    path: '/',
+    name: 'Home',
+    component: Home
+  },
+  {
+    path: '/schedule',
+    name: 'Schedule',
+    component: Schedule
+  },
+  {
+    path: '/meetup',
+    name: 'Meetup',
+    component: Meetup
+  },
+  {
+    path: '/freaksboard',
+    name: 'FreaksBoard',
+    component: FreaksBoard
+  }
+]
 
 const router = new VueRouter({
   routes: routes,

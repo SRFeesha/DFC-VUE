@@ -1,16 +1,18 @@
 <template>
   <div id="app">
+    <Nav></Nav>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import FreaksBoard from "./components/FreaksBoard";
+import Nav from "./components/Nav";
 
 export default {
   name: "App",
   components: {
-    FreaksBoard
+    Nav
   }
 };
 </script>
