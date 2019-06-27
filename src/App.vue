@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <FreaksBoard/>
+    <router-view></router-view>
   </div>
 </template>
 

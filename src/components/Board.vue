@@ -1,10 +1,12 @@
 <template>
-  <div class="arg">
-    <h3>{{ arg }}</h3>
-    <ul>
-      <CardMini v-for="postit in chooseArg" :key="chooseArg.id" :cont="postit.msg"></CardMini>
+  <div class="arg" :class="arg">
+    <div class="title">
+      <h3>{{ arg }}</h3>
+    </div>
+    <ul class="content">
+      <CardMini v-for="postit in postitsByArg" :key="postitsByArg.id" :cont="postit.msg"></CardMini>
     </ul>
-    <Input/>
+    <Input :arg="arg"></Input>
   </div>
 </template>
 
@@ -21,63 +23,17 @@ export default {
   props: {
     arg: String
   },
-  data() {
-    return {
-      postits: [
-        {
-          id: 1,
-          board: "Improvements",
-          msg: "Aria condizionata pls!"
-        },
-        {
-          id: 2,
-          board: "Speakers",
-          msg: "Filippo Andolfatto"
-        },
-        {
-          id: 3,
-          board: "Speakers",
-          msg: "Paolo Spazzini"
-        },
-        {
-          id: 4,
-          board: "Argomenti",
-          msg: "Gradienti"
-        },
-        {
-          id: 5,
-          board: "Improvements",
-          msg: "più birra! 🍻"
-        },
-        {
-          id: 6,
-          board: "Improvements",
-          msg: "More design dollars"
-        },
-        {
-          id: 7,
-          board: "Improvements",
-          msg: "finire dopo le 11"
-        }
-      ]
-    };
-  },
   methods: {},
   computed: {
-    chooseArg: function() {
-      if (this.arg === "Speakers") {
-        return this.postits.filter(function(postit) {
-          return postit.board === "Speakers";
-        });
-      } else if (this.arg === "Improvements") {
-        return this.postits.filter(function(postit) {
-          return postit.board === "Improvements";
-        });
-      } else if (this.arg === "Argomenti") {
-        return this.postits.filter(function(postit) {
-          return postit.board === "Argomenti";
-        });
-      }
+    postits: function() {
+      // console.log(this.$store.state.postits);
+      return this.$store.state.postits;
+    },
+    postitsByArg: function() {
+      let arg = this.arg;
+      return this.$store.state.postits.filter(function(postit) {
+        return postit.board === arg;
+      });
     }
   }
 };
@@ -98,6 +54,8 @@ ul {
   box-shadow: 0px 10px 60px 0px rgba(36, 36, 40, 0.25);
   background-color: white;
   margin: 1em;
+  max-height: 50vh;
+  overflow-y: auto;
 }
 h3 {
   padding: 1rem 4rem;
@@ -106,5 +64,26 @@ h3 {
   padding: 0 4rem;
   /* font-style: italic; */
   color: #0000008c;
+}
+.title {
+  background: white;
+  /* border-radius: 10px 10px 0px 0px; */
+  /* border-bottom: 1px solid lightgray; */
+  /* position: fixed; */
+  width: 25vw;
+  min-width: 300px;
+  /* z-index: 1; */
+}
+.content {
+  /* padding-top: 4rem; */
+}
+.scrolling-title {
+  background: white;
+  border-radius: 10px 10px 0px 0px;
+  border-bottom: 1px solid lightgray;
+  position: fixed;
+  width: 25vw;
+  min-width: 300px;
+  z-index: 1;
 }
 </style>

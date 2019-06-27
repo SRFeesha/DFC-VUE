@@ -5,13 +5,13 @@
 <script>
 export default {
   name: "CardMini",
-  props: {
-    cont: String
-  },
   data() {
     return {
       selected: false
     };
+  },
+  props: {
+    cont: String
   }
 };
 </script>

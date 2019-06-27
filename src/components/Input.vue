@@ -1,26 +1,33 @@
 
 <template>
   <div>
-    <!-- l'autofocus va solo alla prima volta  -->
-    <p class="addmore" @click="adding = true" v-show="!adding">+ Add more</p>
-    <input
-      v-model="content"
-      v-show="adding"
-      @keydown.enter="addCard"
-      @keyup.esc="adding=false"
-      type="text"
-      placeholder="+ Add more"
-      class="form-control"
-      autofocus
-    >
+    <div v-on-clickaway="away">
+      <!-- l'autofocus va solo alla prima volta  -->
+      <p class="addmore" @click="startAdding" v-show="!adding">+ Add more</p>
+      <input
+        id="inputAddMore"
+        v-model="content"
+        v-show="adding"
+        @keydown.enter="addCard"
+        @keyup.esc="adding=false"
+        type="text"
+        placeholder="+ Add more"
+        class="form-control"
+      >
+    </div>
   </div>
 </template>
 
 <script>
+// vue-click-away add-on per gestire quando cliccki fuori dall'input
+// https://github.com/simplesmiler/vue-clickaway
+import { mixin as clickaway } from "vue-clickaway";
+
 export default {
   name: "Input",
+  mixins: [clickaway],
   props: {
-    value: String
+    arg: String
   },
   data() {
     return {
@@ -30,8 +37,30 @@ export default {
   },
   methods: {
     addCard(e) {
-      this.$emit("addcard", this.content);
-      // console.log(this.content);
+      // this.$emit("addcard", this.content);
+      this.$store.commit("addPostIt", {
+        id: 666,
+        msg: this.content,
+        board: this.arg
+      });
+      this.content = "";
+      this.adding = false;
+    },
+    away: function() {
+      if (this.adding) {
+        console.log("clicked away");
+        this.adding = false;
+      }
+    },
+    startAdding: function() {
+      this.adding = true;
+      var selector = "." + this.arg + " #inputAddMore";
+      let x = document.querySelectorAll(selector);
+      // da fixare
+      // metto il timeout altrimenti l'input non è ancora renderizzato e non lo vede
+      setTimeout(function() {
+        x[0].focus();
+      }, 20);
     }
   }
 };
