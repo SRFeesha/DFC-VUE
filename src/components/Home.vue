@@ -6,41 +6,41 @@
         <h3>We are calling out for Visual, UI/UX, and Interaction Design enthusiasts in the Trento community</h3>
         <button>Join meetup</button>
       </div>
-      <img src="../assets/illustration_01_welcome.png" alt="Welcome">
+      <!-- <img src="../assets/illustration_01_welcome.png" alt="Welcome"> -->
     </section>
 
     <section>
-      <img src="../assets/illustration_02_who we are.png" alt="Who we are">
+      <!-- <img src="../assets/illustration_02_who we are.png" alt="Who we are"> -->
       <div>
         <h1>We are the design freaks</h1>
         <p>We provide an opportunity for design students in Trento to exchange ideas, learn new skills and have fun while meeting new exciting creative minds.</p>
       </div>
       <div class="grid-interests">
         <div class="interest">
-            <img src="../assets/icons_02_uiux.png" alt="UI and UX">
-            <p class="caption">UI/UX</p>
+          <img src="../assets/icons_02_uiux.png" alt="UI and UX">
+          <p class="caption">UI/UX</p>
         </div>
         <div class="interest">
-            <img src="../assets/icons_02_visualDesign.png" alt="Visual Design">
-            <p class="caption">visual design</p>
+          <img src="../assets/icons_02_visualDesign.png" alt="Visual Design">
+          <p class="caption">visual design</p>
         </div>
         <div class="interest">
-            <img src="../assets/icons_02_webDesign.png" alt="Web Design">
-            <p class="caption">web design</p>
+          <img src="../assets/icons_02_webDesign.png" alt="Web Design">
+          <p class="caption">web design</p>
         </div>
         <div class="interest">
-            <img src="../assets/icons_02_illustration.png" alt="Illustration">
-            <p class="caption">illustration</p>
+          <img src="../assets/icons_02_illustration.png" alt="Illustration">
+          <p class="caption">illustration</p>
         </div>
         <div class="interest">
-            <img src="../assets/icons_02_photogrphy.png" alt="Photography">
-            <p class="caption">photography</p>
+          <img src="../assets/icons_02_photogrphy.png" alt="Photography">
+          <p class="caption">photography</p>
         </div>
         <div class="interest">
-            <img src="../assets/icons_02_marketing.png" alt="Marketing">
-            <p class="caption">marketing</p>
+          <img src="../assets/icons_02_marketing.png" alt="Marketing">
+          <p class="caption">marketing</p>
         </div>
-    </div>
+      </div>
     </section>
 
     <section>
@@ -49,7 +49,7 @@
         <p>Events include talks from guest speakers on topics around design, photography and professional arts, networking opportunities, dynamic workshop and a good old-fashioned chin-wag over a beer or two.</p>
         <button>Join meetup</button>
       </div>
-      <img src="../assets/illustration_03_what we do.png" alt="What we do">
+      <!-- <img src="../assets/illustration_03_what we do.png" alt="What we do"> -->
     </section>
 
     <section class="sponsor">
@@ -57,7 +57,7 @@
     </section>
 
     <section>
-      <img src="../assets/illustration_05_feedback.png" alt="Share your ideas">
+      <!-- <img src="../assets/illustration_05_feedback.png" alt="Share your ideas"> -->
       <div>
         <h1>Got an idea? Share it!</h1>
         <p>Our community listen to new and old members alike. If you have an idea, a suggestion or a feature request, please let us know! You can find us litterally everywhere.</p>

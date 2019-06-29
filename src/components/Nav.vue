@@ -1,25 +1,32 @@
 <template>
   <div class="contentSpace">
     <div class="moreSpace"></div>
+
     <nav id="mainMenu" class="sticky">
       <div class="logo">
         <img src="../assets/logo_00_designFreaksClub.png" alt="Logo DFC">
       </div>
-      <div class="links">
-        <router-link
-          class="nav-link"
-          v-for="routes in links"
-          v-bind:key="routes.id"
-          :to="`${routes.page}`"
-        >{{ routes.text}}</router-link>
-      </div>
+      <mq-layout :mq="['mobile', 'tablet']">
+        <MenuMobile :links="links"/>
+      </mq-layout>
+
+      <mq-layout mq="desktop+">
+        <MenuDesktop :links="links"/>
+      </mq-layout>
     </nav>
   </div>
 </template>
 
 <script>
+import MenuMobile from "./MenuMobile";
+import MenuDesktop from "./MenuDesktop";
+
 export default {
   name: "Nav",
+  components: {
+    MenuMobile,
+    MenuDesktop
+  },
   data() {
     return {
       links: [
@@ -59,25 +66,19 @@ nav#mainMenu {
   justify-content: space-between;
   align-items: center;
 }
-.nav-link {
-  /* font-family: Circular Std; */
-  color: #334798;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.48px;
-  margin: 1.5rem;
-  text-decoration: none;
-}
-a.router-link-exact-active {
-  border-bottom: 2px solid #334798;
-}
+
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   max-width: 1000px;
 }
+
+.nav-link {
+  font-weight: 700;
+}
+
+// More space before the menu gets sticky
 .moreSpace {
   height: 100px;
 }

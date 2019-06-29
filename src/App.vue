@@ -70,6 +70,12 @@ h1 {
   color: #334798;
 }
 
+@media screen and (min-width: 768px) {
+  #mainMenu {
+    display: none;
+  }
+}
+
 // .body {
 //   font-family: Circular Std;
 //   font-size: 13px;
