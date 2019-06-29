@@ -15,6 +15,32 @@
         <h1>We are the design freaks</h1>
         <p>We provide an opportunity for design students in Trento to exchange ideas, learn new skills and have fun while meeting new exciting creative minds.</p>
       </div>
+      <div class="grid-interests">
+        <div class="interest">
+            <img src="../assets/icons_02_uiux.png" alt="UI and UX">
+            <p class="caption">UI/UX</p>
+        </div>
+        <div class="interest">
+            <img src="../assets/icons_02_visualDesign.png" alt="Visual Design">
+            <p class="caption">visual design</p>
+        </div>
+        <div class="interest">
+            <img src="../assets/icons_02_webDesign.png" alt="Web Design">
+            <p class="caption">web design</p>
+        </div>
+        <div class="interest">
+            <img src="../assets/icons_02_illustration.png" alt="Illustration">
+            <p class="caption">illustration</p>
+        </div>
+        <div class="interest">
+            <img src="../assets/icons_02_photogrphy.png" alt="Photography">
+            <p class="caption">photography</p>
+        </div>
+        <div class="interest">
+            <img src="../assets/icons_02_marketing.png" alt="Marketing">
+            <p class="caption">marketing</p>
+        </div>
+    </div>
     </section>
 
     <section>
@@ -35,6 +61,9 @@
       <div>
         <h1>Got an idea? Share it!</h1>
         <p>Our community listen to new and old members alike. If you have an idea, a suggestion or a feature request, please let us know! You can find us litterally everywhere.</p>
+        <img src="../assets/icon_05_facebook.png" alt="Facebook">
+        <img src="../assets/icon_05_instagram.png" alt="Instagram">
+        <img src="../assets/icon_05_telegram.png" alt="Telegram">
       </div>
     </section>
 
@@ -76,6 +105,6 @@ export default {
 <style>
 .sponsor {
   height: 50vh;
-  background-color: blueviolet;
+  background-color: #334798;
 }
 </style>
