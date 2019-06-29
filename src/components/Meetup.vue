@@ -4,7 +4,7 @@
 
     <div>
       <h2>Next meetup</h2>
-      <img src="../assets/Workshop.jpg" alt="Ready for next event?">
+      <img src="" alt="Ready for next event?">
       <p>Some text</p>
     </div>
 
@@ -13,14 +13,14 @@
       <div>
         <p>Data</p>
         <h4>Titolo evento</h4>
-        <img src="../assets/Workshop_01.jpg" alt="Previous event">
+        <img src="" alt="Previous event">
         <p>Breve sunto</p>
       </div>
       <hr>
          <div>
         <p>Data</p>
         <h4>Titolo evento</h4>
-        <img src="../assets/Workshop_02.jpg" alt="Previous event">
+        <img src="" alt="Previous event">
         <p>Breve sunto</p>
       </div>
       <hr>
