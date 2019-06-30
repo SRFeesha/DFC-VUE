@@ -27,6 +27,7 @@ export default {
   letter-spacing: 0.48px;
   margin: 1.5rem;
   text-decoration: none;
+  font-weight: 500;
 }
 a.router-link-exact-active {
   border-bottom: 2px solid #334798;

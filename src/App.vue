@@ -18,20 +18,22 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/font/font.css"; /* Using a string */
 html,
 body {
   margin: 0;
   background-color: #f1cfda;
 }
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  // font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: Circular Std, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
 }
 .contentSpace {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -58,6 +60,7 @@ h3 {
   line-height: 32px;
   letter-spacing: 0.5px;
   color: #334798;
+  font-weight: 400;
 }
 h2 {
   font-family: Larish Neue;

@@ -1,17 +1,15 @@
 <template>
-  <div class="contentSpace">
-    <div class="moreSpace"></div>
-
+  <div>
     <nav id="mainMenu" class="sticky">
       <div class="logo">
-        <img src="../assets/logo_00_designFreaksClub.png" alt="Logo DFC">
+        <img src="../assets/logo_00_designFreaksClub.png" alt="Logo DFC" />
       </div>
       <mq-layout :mq="['mobile', 'tablet']">
-        <MenuMobile :links="links"/>
+        <MenuMobile :links="links" />
       </mq-layout>
 
       <mq-layout mq="desktop+">
-        <MenuDesktop :links="links"/>
+        <MenuDesktop :links="links" />
       </mq-layout>
     </nav>
   </div>
@@ -65,13 +63,16 @@ nav#mainMenu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  font-weight: 500;
+  padding: 1rem calc((100vw - 1200px) / 2);
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100vw;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .nav-link {

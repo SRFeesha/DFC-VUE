@@ -41,6 +41,32 @@ export const store = new Vuex.Store({
         board: "Improvements",
         msg: "finire dopo le 11"
       }
+    ],
+    events: [
+      {
+        id: 0,
+        date: "2019-01-01",
+        title: "Event 0",
+        brief: "this is a brief"
+      },
+      {
+        id: 1,
+        date: "2019-02-01",
+        title: "Event 1",
+        brief: "this is a brief"
+      },
+      {
+        id: 2,
+        date: "2019-03-01",
+        title: "Event 2",
+        brief: "this is a brief"
+      },
+      {
+        id: 3,
+        date: "2019-04-01",
+        title: "Event 3",
+        brief: "this is a brief"
+      }
     ]
   },
   mutations: {

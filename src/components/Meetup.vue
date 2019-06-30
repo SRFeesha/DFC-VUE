@@ -2,6 +2,7 @@
   <div class="contentSpace">
     <h1>Meetup</h1>
     <NextEvent/>
+    <hr>
     <PastEvent/>
   </div>
 </template>
