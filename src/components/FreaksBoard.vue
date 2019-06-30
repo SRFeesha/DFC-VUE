@@ -1,21 +1,26 @@
 <template>
-  <div class="FreaksBoard">
-    <h1>Freaks Board</h1>
-    <div class="board">
-      <Board arg="Speakers"/>
-      <Board arg="Improvements"/>
-      <Board arg="Argomenti"/>
+  <div>
+    <div class="FreaksBoard">
+      <h1>Freaks Board</h1>
+      <div class="board">
+        <Board arg="Speakers" />
+        <Board arg="Improvements" />
+        <Board arg="Argomenti" />
+      </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Board from "./Board";
+import Footer from "./Footer";
 
 export default {
   name: "FreaksBoard",
   components: {
-    Board
+    Board,
+    Footer
   }
 };
 </script>

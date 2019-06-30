@@ -21,13 +21,13 @@ export default {
 <style scoped>
 .nav-link {
   /* font-family: Circular Std; */
-  color: #334798;
-  font-size: 20px;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 500;
   line-height: 28px;
   letter-spacing: 0.48px;
   margin: 1.5rem;
-  text-decoration: none;
-  font-weight: 500;
+  color: #334798;
 }
 a.router-link-exact-active {
   border-bottom: 2px solid #334798;

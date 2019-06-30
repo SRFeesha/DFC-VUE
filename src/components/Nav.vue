@@ -57,9 +57,9 @@ export default {
 <style lang="scss">
 nav#mainMenu {
   background-color: #f1cfda;
-  height: 20vh;
+  height: 10vh;
   min-height: 50px;
-  max-height: 100px;
+  max-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
