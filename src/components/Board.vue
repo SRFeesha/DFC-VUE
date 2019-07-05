@@ -23,10 +23,15 @@ export default {
   props: {
     arg: String
   },
-  methods: {},
+  methods: {
+    // setPostIt: function() {
+    //   console.log("trying soooo hard");
+    //   this.$store.getters.setPostIt;
+    // }
+  },
   computed: {
     postits: function() {
-      // console.log(this.$store.state.postits);
+      console.log(this.$store.state.postits);
       return this.$store.state.postits;
     },
     postitsByArg: function() {
@@ -39,7 +44,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 ul {
   list-style-type: none;
@@ -74,9 +78,9 @@ h3 {
   min-width: 300px;
   /* z-index: 1; */
 }
-.content {
-  /* padding-top: 4rem; */
-}
+/* .content {
+ padding-top: 4rem; 
+} */
 .scrolling-title {
   background: white;
   border-radius: 10px 10px 0px 0px;

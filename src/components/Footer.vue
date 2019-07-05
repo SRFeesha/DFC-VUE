@@ -25,6 +25,7 @@ footer {
   width: 80vw;
   margin-left: calc((100vw - 1200px) / -2);
   font-weight: 500;
+  border-radius: 0vh 2vh 0 0;
 }
 h3.title {
   color: #f1cfda;

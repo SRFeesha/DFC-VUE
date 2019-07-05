@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="centered">
     <nav id="mainMenu" class="sticky">
       <div class="logo">
         <img src="../assets/logo_00_designFreaksClub.png" alt="Logo DFC" />
@@ -56,16 +56,17 @@ export default {
 
 <style lang="scss">
 nav#mainMenu {
-  background-color: #f1cfda;
-  height: 10vh;
-  min-height: 50px;
-  max-height: 80px;
+  padding: 1rem calc((90vw - 1200px) / 2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  height: 10vh;
+  min-height: 50px;
+  max-height: 80px;
+  width: 90%;
+  background-color: #f1cfda;
   font-weight: 500;
-  padding: 1rem calc((100vw - 1200px) / 2);
+  border-radius: 0vh 0vh 2vh 2vh;
 }
 
 .sticky {
@@ -82,5 +83,9 @@ nav#mainMenu {
 // More space before the menu gets sticky
 .moreSpace {
   height: 100px;
+}
+.centered {
+  display: flex;
+  justify-content: center;
 }
 </style>
