@@ -38,22 +38,12 @@ export default {
     };
   },
   methods: {
-    addCard(e) {
-      //TODO: this hould be managed from store
-      db.collection("freaks-board")
-        .add({
-          board: this.arg,
-          msg: this.content
-        })
-        .then(response => {
-          if (response) {
-            console.log("added");
-          }
-        })
-        .catch(error => {
-          this.errors = error;
-        });
-
+    addCard() {
+      let newPostIt = {
+        board: this.arg,
+        msg: this.content
+      };
+      this.$store.commit("addPostIt", newPostIt);
       this.content = "";
       this.adding = false;
     },

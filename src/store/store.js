@@ -86,9 +86,25 @@ const store = new Vuex.Store({
     }
   },
   mutations: {
-    // addPostIt(state, postit) {
-    //   state.postits.push(postit);
-    // }
+    addPostIt: function(state, postit) {
+      db.collection("freaks-board")
+        .add({
+          board: postit.board,
+          msg: postit.msg
+        })
+        .then(response => {
+          if (response) {
+            console.log("added successfully");
+          }
+        })
+        .catch(error => {
+          console.warn(error);
+        });
+
+      // this.content = "";
+      // this.adding = false;
+    },
+
     setPostIt: state => {
       let postits = [];
       db.collection("freaks-board")
@@ -128,6 +144,9 @@ const store = new Vuex.Store({
     },
     deletePostIt: context => {
       context.commit("deletePostIt");
+    },
+    addPostIt: context => {
+      context.commit("addPostIt");
     }
   }
 });
