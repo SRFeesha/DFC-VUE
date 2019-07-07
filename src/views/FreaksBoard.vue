@@ -8,19 +8,16 @@
         <Board arg="Argomenti" />
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Board from "./Board";
-import Footer from "./Footer";
+import Board from "../components/Board";
 
 export default {
   name: "FreaksBoard",
   components: {
-    Board,
-    Footer
+    Board
   }
 };
 </script>

@@ -1,8 +1,10 @@
+// TODO: Import duplicato: c'è anche in store
+// occhio a toglierlo
 import VueRouter from "vue-router";
-import Home from "../components/Home";
-import Schedule from "../components/Schedule";
-import Meetup from "../components/Meetup";
-import FreaksBoard from "../components/FreaksBoard";
+import Home from "../views/Home";
+import Schedule from "../views/Schedule";
+import Meetup from "../views/Meetup";
+import FreaksBoard from "../views/FreaksBoard";
 
 const routes = [
   {

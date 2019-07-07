@@ -127,13 +127,8 @@
 </template>
 
 <script>
-import Footer from "./Footer";
-
 export default {
-  name: "Home",
-  components: {
-    Footer
-  }
+  name: "Home"
 };
 </script>
 

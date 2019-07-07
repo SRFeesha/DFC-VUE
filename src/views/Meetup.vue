@@ -9,16 +9,14 @@
 </template>
 
 <script>
-import NextEvent from "./NextEvent";
-import PastEvent from "./PastEvent";
-import Footer from "./Footer";
+import NextEvent from "../components/NextEvent";
+import PastEvent from "../components/PastEvent";
 
 export default {
   name: "Meetup", //this is the name of the component
   components: {
     NextEvent,
-    PastEvent,
-    Footer
+    PastEvent
   }
 };
 </script>

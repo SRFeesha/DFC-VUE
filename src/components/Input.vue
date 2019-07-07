@@ -13,7 +13,7 @@
         type="text"
         placeholder="+ Add more"
         class="form-control"
-      >
+      />
     </div>
   </div>
 </template>
@@ -22,6 +22,7 @@
 // vue-click-away add-on per gestire quando cliccki fuori dall'input
 // https://github.com/simplesmiler/vue-clickaway
 import { mixin as clickaway } from "vue-clickaway";
+import { db } from "@/main";
 
 export default {
   name: "Input",
@@ -32,20 +33,31 @@ export default {
   data() {
     return {
       adding: false,
-      content: this.value
+      content: this.value,
+      errors: ""
     };
   },
   methods: {
     addCard(e) {
-      // this.$emit("addcard", this.content);
-      this.$store.commit("addPostIt", {
-        id: 666,
-        msg: this.content,
-        board: this.arg
-      });
+      //TODO: this hould be managed from store
+      db.collection("freaks-board")
+        .add({
+          board: this.arg,
+          msg: this.content
+        })
+        .then(response => {
+          if (response) {
+            console.log("added");
+          }
+        })
+        .catch(error => {
+          this.errors = error;
+        });
+
       this.content = "";
       this.adding = false;
     },
+
     away: function() {
       if (this.adding) {
         console.log("clicked away");

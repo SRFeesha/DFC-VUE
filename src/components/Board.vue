@@ -4,7 +4,12 @@
       <h3>{{ arg }}</h3>
     </div>
     <ul class="content">
-      <CardMini v-for="postit in postitsByArg" :key="postitsByArg.id" :cont="postit.msg"></CardMini>
+      <CardMini
+        v-for="postit in postitsByArg"
+        :key="postitsByArg.id"
+        :cont="postit.msg"
+        :dbid="postit.dbid"
+      ></CardMini>
     </ul>
     <Input :arg="arg"></Input>
   </div>
@@ -16,6 +21,9 @@ import Input from "./Input";
 
 export default {
   name: "Board",
+  beforeCreate: function() {
+    this.$store.dispatch("setPostIt");
+  },
   components: {
     CardMini,
     Input
@@ -23,16 +31,11 @@ export default {
   props: {
     arg: String
   },
-  methods: {
-    // setPostIt: function() {
-    //   console.log("trying soooo hard");
-    //   this.$store.getters.setPostIt;
-    // }
-  },
   computed: {
     postits: function() {
-      console.log(this.$store.state.postits);
-      return this.$store.state.postits;
+      // console.log(this.$store.state.postits);
+      // return this.$store.state.postits;
+      return this.$store.getters.getPostIts;
     },
     postitsByArg: function() {
       let arg = this.arg;

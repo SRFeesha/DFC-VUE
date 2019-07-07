@@ -27,13 +27,9 @@
 </template>
 
 <script>
-import Footer from "./Footer";
-
 export default {
   name: "Schedule",
-  components: {
-    Footer
-  }
+  components: {}
 };
 </script>
 <style>

@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import MenuMobile from "./MenuMobile";
-import MenuDesktop from "./MenuDesktop";
+import MenuMobile from "./TheMenuMobile";
+import MenuDesktop from "./TheMenuDesktop";
 
 export default {
   name: "Nav",

@@ -1,17 +1,27 @@
 <template>
-  <li v-bind:class="{ selected: selected }" @click="selected = !selected">{{ cont }}</li>
+  <li v-bind:class="{ selected: selected }" @dblclick="deletePostIt">{{ cont }}</li>
 </template>
 
 <script>
+import { db } from "@/main";
+
 export default {
   name: "CardMini",
   data() {
     return {
-      selected: false
+      selected: false,
+      error: "everything is right"
     };
   },
   props: {
-    cont: String
+    cont: String,
+    dbid: String
+  },
+  methods: {
+    deletePostIt: function() {
+      // console.log("start deleting", this.cont, this.dbid);
+      this.$store.commit("deletePostIt", this.dbid);
+    }
   }
 };
 </script>

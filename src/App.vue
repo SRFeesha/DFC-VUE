@@ -2,17 +2,20 @@
   <div id="app">
     <Nav></Nav>
     <router-view></router-view>
+    <Footer />
   </div>
 </template>
 
 <script>
-import FreaksBoard from "./components/FreaksBoard";
-import Nav from "./components/Nav";
+// import FreaksBoard from "./components/FreaksBoard";
+import Nav from "./components/TheNavbar";
+import Footer from "./components/TheFooter";
 
 export default {
   name: "App",
   components: {
-    Nav
+    Nav,
+    Footer
   }
 };
 </script>
