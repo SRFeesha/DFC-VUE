@@ -89,6 +89,30 @@ h1 {
   color: #334798;
 }
 
+section {
+  height: 70vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100%;
+  .pitch {
+    grid-column: 1 / 8;
+    grid-row: 1;
+    h1 {
+      margin: 1rem 0rem;
+    }
+    h3 {
+      width: 66%;
+      margin: 1rem 0rem;
+    }
+  }
+  .illustration {
+    grid-column: 6 / 12;
+    grid-row: 1;
+    object-fit: cover;
+  }
+}
+
 @media screen and (min-width: 768px) {
   #mainMenu {
     display: none;

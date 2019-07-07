@@ -1,36 +1,68 @@
 <template>
   <div class="contentSpace">
-    <img
-      src="../assets/illustration_04_schedule.png"
-      alt="discover the design freaks club schedule"
-    />
-    <div class="grid-timetable">
-      <h1>A schedule that rocks!</h1>
-      <div class="time">20:30</div>
-      <div class="phase">Open for arrivals & drinks*</div>
-      <div class="time">20:50</div>
-      <div class="phase">Welcome & Introduction</div>
-      <div class="time">21:10</div>
-      <div class="phase">Talk</div>
-      <div class="time">21:30</div>
-      <div class="phase">Q&A</div>
-      <div class="time">21:40</div>
-      <div class="phase">Open Mic Session</div>
-      <div class="time">22:00</div>
-      <div class="phase">Raffle & close event</div>
-      <div class="time">22:05</div>
-      <div class="phase">Pizza* & Networking</div>
-      <div class="disclaimer">*drinks and food are subject to a small charge to cover the costs</div>
-    </div>
+    <section id="schedule">
+      <div class="illustration">
+        <img
+          src="../assets/illustration_04_schedule.png"
+          alt="discover the design freaks club schedule"
+        />
+      </div>
+      <div class="pitch">
+        <div class="grid-timetable">
+          <h1>A schedule that rocks!</h1>
+          <div class="time-table">
+            <div>20:30</div>
+            <div>Open for arrivals & drinks*</div>
+            <div>20:50</div>
+            <div>Welcome & Introduction</div>
+            <div>21:10</div>
+            <div>Talk</div>
+            <div>21:30</div>
+            <div>Q&A</div>
+            <div>21:40</div>
+            <div>Open Mic Session</div>
+            <div>22:00</div>
+            <div>Raffle & close event</div>
+            <div>22:05</div>
+            <div>Pizza* & Networking</div>
+            <div>
+              <!-- useful to align disclaimer -->
+            </div>
+            <div
+              class="disclaimer"
+            >*drinks and food are subject to a small charge to cover the costs</div>
+          </div>
+        </div>
+      </div>
+    </section>
     <Footer />
   </div>
 </template>
 
 <script>
 export default {
-  name: "Schedule",
-  components: {}
+  name: "Schedule"
 };
 </script>
 <style>
+#schedule {
+  padding: 8rem 0 0 0;
+}
+.time-table {
+  font-family: Larish Neue;
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 3fr;
+  grid-column-gap: 2rem;
+}
+.time-table div {
+  margin: 1rem;
+}
+
+.time-table :nth-child(odd) {
+  text-align: right;
+}
+
+.disclaimer {
+  font-size: 0.75em;
+}
 </style>

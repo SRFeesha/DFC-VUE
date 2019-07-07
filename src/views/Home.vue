@@ -140,29 +140,7 @@ export default {
     color: #f1cfda;
   }
 }
-section {
-  height: 70vh;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100%;
-  .pitch {
-    grid-column: 1 / 8;
-    grid-row: 1;
-    h1 {
-      margin: 1rem 0rem;
-    }
-    h3 {
-      width: 66%;
-      margin: 1rem 0rem;
-    }
-  }
-  .illustration {
-    grid-column: 6 / 12;
-    grid-row: 1;
-    object-fit: cover;
-  }
-}
+
 #hero {
   padding: 8rem 0rem 2rem 0rem;
   .pitch {
