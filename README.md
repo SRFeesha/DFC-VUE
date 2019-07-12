@@ -14,17 +14,32 @@ The first event will be on 8th of October.
 
 [Our Instagram Page](https://www.instagram.com/designfreaksclub/)
 
+## Build setup
+
+        # install dependencies
+        npm install
+
+        # serve with hot reload at localhost:8080
+        npm run dev
+
+        # build for production with minification
+        npm run build
+
+        # build for production and view the bundle analyzer report
+        npm run build --report
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
 ### Folder structure
 
 To start working with the project the only folder you should really care about is **src **.
 
 In src code is divided like this
 
-    ``` bash
     .
     ├── src
     │		├── assets                  # all the assets used in the project
-    │		│		├─ fonts
+    │		│	├─ fonts
     │		│   └─ images
     │		├── components              # single-file components
     │		├── router                  # where the router logic is
@@ -33,7 +48,6 @@ In src code is divided like this
     │		├── App.Vue                 # root component. Contains some general styling
     │		└── main.js                 # where the Vue instance is generated and the libraries are called
     └── index.html                  # where the root object is (#app in our case)
-    ```
 
 **Notes**
 
@@ -54,24 +68,6 @@ Other dependencies that have been added in order to simplify some tasks are:
 
 **Note**
 At this stage of the project the vue permission are set to public. When the project will be set to production mode, this _MUST_ be changed.
-
-### Build setup
-
-    ``` bash
-        # install dependencies
-        npm install
-
-        # serve with hot reload at localhost:8080
-        npm run dev
-
-        # build for production with minification
-        npm run build
-
-        # build for production and view the bundle analyzer report
-        npm run build --report
-        ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
 ## Consideration
 
