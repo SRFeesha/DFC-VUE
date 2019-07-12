@@ -3,7 +3,7 @@
 Design Freaks Club is a monthly meetup in the community of Trento.
 We talk about anything-design, photography, marketing.
 
-![Welcome to deign Freaks Club!](https://imgur.com/AsGBGS8)
+![Welcome to deign Freaks Club!](https://i.imgur.com/AsGBGS8.gifv)
 
 The project is trying to make some noise in Trento design panorama with a _disruptive approach_.
 The Design field is evolving and cutting its space all around the world, it's time to bring this change also in the Trento community.
