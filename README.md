@@ -38,15 +38,15 @@ In src code is divided like this
 
     .
     ├── src
-    │	├── assets                  # all the assets used in the project
-    │	│	├─ fonts
-    │	│   └─ images
-    │	├── components              # single-file components
-    │	├── router                  # where the router logic is
-    │	├── store                   # where the store logic is
-    │	├── views                   # the view components are like web pages we are used to
-    │	├── App.Vue                 # root component. Contains some general styling
-    │	└── main.js                 # where the Vue instance is generated and the libraries are called
+    │   ├── assets                  # all the assets used in the project
+    │   │   ├─ fonts
+    │   │   └─ images
+    │   ├── components              # single-file components
+    │   ├── router                  # where the router logic is
+    │   ├── store                   # where the store logic is
+    │   ├── views                   # the view components are like web pages we are used to
+    │   ├── App.Vue                 # root component. Contains some general styling
+    │   └── main.js                 # where the Vue instance is generated and the libraries are called
     └── index.html                  # where the root object is (#app in our case)
 
 **Notes**
