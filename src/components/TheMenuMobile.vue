@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="hamburger" @click="openHamburger">
-      <img src="../assets/hamburger.png" alt="toggle menu">
+      <img src="../assets/hamburger.png" alt="toggle menu" />
     </div>
 
     <!-- The overlay -->
@@ -55,7 +55,7 @@ export default {
   height: 0;
   width: 100vw;
   position: fixed;
-  z-index: 1;
+  z-index: 99;
   top: 0;
   left: 0;
   background-color: #334798;
@@ -88,6 +88,7 @@ export default {
   color: #f1cfda;
   display: block;
   transition: 0.3s;
+  z-index: 99;
 }
 
 /* .overlay a:hover,

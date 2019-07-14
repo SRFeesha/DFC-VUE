@@ -44,7 +44,8 @@ export default {
   name: "Schedule"
 };
 </script>
-<style>
+
+<style scoped>
 #schedule {
   padding: 8rem 0 0 0;
 }
@@ -64,5 +65,26 @@ export default {
 
 .disclaimer {
   font-size: 0.75em;
+}
+
+.illustration {
+  grid-column: 1 / 13;
+  grid-row: 1;
+  padding-top: 50vh;
+  opacity: 0.5;
+}
+
+.pitch {
+  grid-column: 1 / 10;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .pitch {
+    grid-column: 1 / 8;
+  }
+  .illustration {
+    grid-column: 6 / 13;
+  }
 }
 </style>

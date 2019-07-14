@@ -2,12 +2,13 @@
   <div class="centered">
     <nav id="mainMenu" class="sticky">
       <div class="logo">
-        <img src="../assets/logo_00_designFreaksClub.png" alt="Logo DFC" />
+        <router-link to="/">
+          <img src="../assets/logo_00_designFreaksClub.png" alt="Logo DFC" />
+        </router-link>
       </div>
       <mq-layout :mq="['mobile', 'tablet']">
         <MenuMobile :links="links" />
       </mq-layout>
-
       <mq-layout mq="desktop+">
         <MenuDesktop :links="links" />
       </mq-layout>
@@ -56,17 +57,21 @@ export default {
 
 <style lang="scss">
 nav#mainMenu {
-  padding: 1rem calc((90vw - 1200px) / 2);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 10vh;
   min-height: 50px;
   max-height: 80px;
   width: 90%;
-  background-color: #f1cfda;
+  margin: auto;
   font-weight: 500;
   border-radius: 0vh 0vh 2vh 2vh;
+  background-color: #f1cfda;
+  padding: 1rem 0;
+  z-index: 99;
+  // padding: 1rem calc((90vw - 1200px) / 2);
+  // box-sizing: content-box;
 }
 
 .sticky {

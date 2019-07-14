@@ -37,7 +37,18 @@ body {
 }
 .contentSpace {
   max-width: 1200px;
-  margin: auto;
+  margin: 1rem;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2rem 0rem;
+  span {
+    text-align: center;
+    margin: 1rem 0rem;
+  }
 }
 
 button {
@@ -50,34 +61,28 @@ button {
   border-radius: 100px;
   padding: 1em 3em;
   margin-top: 1em;
-  & + span {
-    margin: 0rem 1rem;
-    font-size: 12px;
-    color: #334798;
-  }
-  &:hover {
-    transform: scale(1.1);
-    transition: ease-in 0.2s;
-    cursor: pointer;
-  }
+  // & + span {
+  // display: block;
+  // text-align: center;
+  // }
 }
 
 h3 {
   font-family: Circular Std;
   font-size: 25px;
-  line-height: 32px;
+  line-height: 2rem;
   letter-spacing: 0.5px;
   color: #334798;
   font-weight: 400;
 }
 h2 {
   font-family: Larish Neue;
-  font-size: 40px;
+  font-size: 3rem;
   color: #334798;
 }
 h1 {
   font-family: Larish Neue;
-  font-size: 69px;
+  font-size: 4rem;
   color: #334798;
 }
 
@@ -91,31 +96,98 @@ h1 {
 
 section {
   height: 70vh;
+  min-height: min-content;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100%;
-  .pitch {
-    grid-column: 1 / 8;
-    grid-row: 1;
-    h1 {
-      margin: 1rem 0rem;
-    }
-    h3 {
-      width: 66%;
-      margin: 1rem 0rem;
-    }
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+.illustration {
+  grid-column: 1 / 7;
+  grid-row: 2;
+  object-fit: cover;
+  img {
+    max-width: 100%;
   }
-  .illustration {
-    grid-column: 6 / 12;
-    grid-row: 1;
-    object-fit: cover;
+}
+.pitch {
+  grid-column: 1 / 7;
+  grid-row: 1;
+  h1 {
+    margin: 1rem 0rem;
+  }
+  h3 {
+    width: 66%;
+    margin: 1rem 0rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   #mainMenu {
     display: none;
+  }
+  section {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
+  }
+  .contentSpace {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  section {
+    height: 70vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    .pitch {
+      grid-column: 1 / 8;
+      grid-row: 1;
+      h1 {
+        margin: 1rem 0rem;
+      }
+      h3 {
+        width: 66%;
+        margin: 1rem 0rem;
+      }
+    }
+    .illustration {
+      grid-column: 6 / 12;
+      grid-row: 1;
+      object-fit: cover;
+    }
+  }
+  h3 {
+    font-family: Circular Std;
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    color: #334798;
+    font-weight: 400;
+  }
+  h2 {
+    font-family: Larish Neue;
+    font-size: 40px;
+    color: #334798;
+  }
+  h1 {
+    font-family: Larish Neue;
+    font-size: 69px;
+    color: #334798;
+  }
+  .cta {
+    display: block;
+  }
+  .button + span {
+    margin: 0rem 1rem;
+    font-size: 12px;
+    color: #334798;
+  }
+  .button:hover {
+    transform: scale(1.1);
+    transition: ease-in 0.2s;
+    cursor: pointer;
   }
 }
 </style>

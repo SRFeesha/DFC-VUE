@@ -4,8 +4,10 @@
       <div class="pitch">
         <h1>A creative meetup</h1>
         <h3>We are calling out for Visual, UI/UX, and Interaction Design enthusiasts in the Trento community</h3>
-        <button>Join meetup</button>
-        <span>Go on, it's free!</span>
+        <div class="cta">
+          <button>Join meetup</button>
+          <span>Go on, it's free!</span>
+        </div>
       </div>
       <div class="illustration">
         <img src="../assets/illustration_01_welcome.png" alt="Welcome" />
@@ -56,17 +58,19 @@
         <p
           class="body-section"
         >Events include talks from guest speakers on topics around design, photography and professional arts, networking opportunities, dynamic workshop and a good old-fashioned chin-wag over a beer or two.</p>
-        <button>Join meetup</button>
-        <span>Go on, it's free!</span>
+        <div class="cta">
+          <button>Join meetup</button>
+          <span>Go on, it's free!</span>
+        </div>
       </div>
       <div class="illustration">
         <img src="../assets/illustration_03_what we do.png" alt="What we do" />
       </div>
     </section>
 
-    <section id="sponsor">
+    <!-- <section id="sponsor">
       <h2>Proudly sponsored by</h2>
-    </section>
+    </section>-->
 
     <section id="social">
       <div class="illustration">
@@ -95,7 +99,7 @@
       </div>
     </section>
 
-    <section id="faq">
+    <!-- <section id="faq">
       <h2>Frequently Asked Questions</h2>
       <div>
         <h4>What's the meetup about?</h4>
@@ -121,7 +125,8 @@
         <h4>Can I speak at the next event?</h4>
         <p></p>
       </div>
-    </section>
+    </section>-->
+
     <Footer></Footer>
   </div>
 </template>
@@ -133,31 +138,33 @@ export default {
 </script>
 
 <style lang="scss">
-#sponsor {
-  height: 50vh;
-  background-color: #334798;
-  h2 {
-    color: #f1cfda;
-  }
-}
-
 #hero {
-  padding: 8rem 0rem 2rem 0rem;
+  padding: 2rem 0rem 2rem 0rem;
   .pitch {
-    grid-column: 1 / 8;
+    grid-column: 1 / 7;
+    grid-row: 2;
+    h3 {
+      width: 100%;
+    }
+  }
+  .illustration {
+    grid-column: 1 / 7;
+    grid-row: 1;
   }
 }
 #whoWeAre {
   padding: 8rem 0rem 2rem 0rem;
   height: 50vh;
   .pitch {
-    grid-column: 7 / 13;
+    grid-column: 1 / 7;
+    grid-row: 2;
     h2 {
       margin: 0 0 1.5rem 0;
     }
   }
   .illustration {
-    grid-column: 1/8;
+    grid-column: 1/7;
+    grid-row: 1;
   }
 }
 #joinUs {
@@ -165,20 +172,22 @@ export default {
   place-items: center center;
   .pitch {
     grid-column: 1 / 6;
+    grid-row: 1;
     h2 {
       margin: 0 0 1.5rem 0;
       width: 66%;
     }
   }
   .illustration {
-    grid-column: 7 / 13;
+    grid-column: 1 / 7;
+    grid-row: 2;
   }
 }
-#sponsor {
-  background-color: #334798;
-  width: 100vw;
-  margin-left: calc((100vw - 1200px) / -2);
-}
+// #sponsor {
+//   background-color: #334798;
+//   width: 100vw;
+//   margin-left: calc((100vw - 1200px) / -2);
+// }
 #social {
   place-items: center center;
   .pitch {
@@ -202,5 +211,54 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2rem 0 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  #hero {
+    padding: 5rem 0rem 2rem 0rem;
+  }
+  section {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
+  }
+  #hero {
+    padding: 8rem 0rem 2rem 0rem;
+    .pitch {
+      grid-column: 1 / 8;
+      grid-row: 1;
+    }
+    .illustration {
+      grid-column: 7 / 13;
+      grid-row: 1;
+    }
+  }
+  #whoWeAre {
+    padding: 8rem 0rem 2rem 0rem;
+    height: 50vh;
+    .pitch {
+      grid-column: 7 / 13;
+      grid-row: 1;
+      h2 {
+        margin: 0 0 1.5rem 0;
+      }
+    }
+    .illustration {
+      grid-column: 1/8;
+    }
+  }
+  #joinUs {
+    padding: 8rem 0rem 2rem 0rem;
+    place-items: center center;
+    .pitch {
+      grid-column: 1 / 6;
+      h2 {
+        margin: 0 0 1.5rem 0;
+        width: 66%;
+      }
+    }
+    .illustration {
+      grid-column: 7 / 13;
+      grid-row: 1;
+    }
+  }
 }
 </style>
