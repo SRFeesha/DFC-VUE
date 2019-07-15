@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <div class="more-space"></div>
-    <footer>
-      <h3 class="title">Design Freaks Club ©</h3>
-      <p>Design freaks club is a monthly meetup in the community of Trento. We talk about anything-design, photography, marketing. You can join our event here:</p>
-      <div class="social">
-        <a href>Facebook</a>
-        <a href>Instagram</a>
-        <a href>Telegram</a>
-      </div>
-    </footer>
-  </div>
+  <footer>
+    <h3 class="title">Design Freaks Club ©</h3>
+    <p>Design freaks club is a monthly meetup in the community of Trento. We talk about anything-design, photography, marketing. You can join our event here:</p>
+    <div class="social">
+      <a href>Facebook</a>
+      <a href>Instagram</a>
+      <a href>Telegram</a>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -55,9 +52,6 @@ a {
   text-decoration: none;
   /* margin-right: 2.5rem; */
   font-weight: 400;
-}
-.more-space {
-  height: 10vh;
 }
 
 @media screen and (min-width: 768px) {

@@ -94,8 +94,6 @@
         </div>
       </div>
     </section>
-
-    <Footer></Footer>
   </div>
 </template>
 
@@ -106,52 +104,6 @@ export default {
 </script>
 
 <style lang="scss">
-#hero {
-  padding: 2rem 0rem 2rem 0rem;
-  .pitch {
-    grid-column: 1 / 7;
-    h3 {
-      width: 100%;
-    }
-  }
-  .illustration {
-    grid-column: 1 / 7;
-  }
-}
-
-#whoWeAre {
-  padding: 8rem 0rem 2rem 0rem;
-  height: 50vh;
-  .h2 {
-    margin: 0 0 1.5rem 0;
-  }
-  .illustration {
-    padding-bottom: 3rem;
-  }
-}
-
-#joinUs {
-  padding: 8rem 0rem 2rem 0rem;
-  place-items: center center;
-  .pitch {
-    h2 {
-      margin: 2rem 0 1.5rem 0;
-    }
-  }
-}
-
-#social {
-  // place-items: center center;
-  .pitch {
-    grid-column: 1 / 7;
-    grid-row: 2;
-  }
-  .illustration {
-    grid-column: 1 / 7;
-    grid-row: 1;
-  }
-}
-
 .grid-interests {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -169,10 +121,6 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-  #hero {
-    padding: 5rem 0rem 2rem 0rem;
-  }
-
   section {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 100%;
@@ -182,11 +130,12 @@ export default {
     padding: 8rem 0rem 2rem 0rem;
     .pitch {
       grid-column: 1 / 8;
-      grid-row: 1;
+      h3 {
+        width: 66%;
+      }
     }
     .illustration {
       grid-column: 7 / 13;
-      grid-row: 1;
     }
   }
 
@@ -195,14 +144,10 @@ export default {
     height: 50vh;
     .pitch {
       grid-column: 7 / 13;
-      grid-row: 1;
-      h2 {
-        margin: 0 0 1.5rem 0;
-      }
     }
     .illustration {
-      grid-column: 1/8;
-      padding-bottom: 0;
+      grid-column: 1 / 8;
+      // padding-bottom: 0;
     }
   }
 
@@ -227,11 +172,9 @@ export default {
     .pitch {
       grid-column: 7 / 13;
       padding: 0 0 0 4rem;
-      grid-row: 1;
     }
     .illustration {
       grid-column: 1 / 7;
-      grid-row: 1;
     }
   }
 }

@@ -21,7 +21,10 @@ export default {
 </script>
 
 <style lang="scss">
+// TODO: Super bad practice, should be linked in html instead
 @import "./assets/font/font.css"; /* Using a string */
+
+// start LAYOUT
 html,
 body {
   margin: 0;
@@ -41,6 +44,17 @@ body {
   margin: 1rem;
 }
 
+section {
+  height: 70vh;
+  min-height: min-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+}
+
 .cta {
   display: flex;
   justify-content: center;
@@ -50,56 +64,22 @@ body {
     text-align: center;
     margin: 1rem 0rem;
   }
-}
-
-button {
-  font-family: Larish Neue;
-  font-size: 18px;
-  letter-spacing: 0.54px;
-  color: #ffffff;
-  background-color: #334798;
-  border: 0px;
-  border-radius: 100px;
-  padding: 1em 3em;
-  margin-top: 1em;
-}
-
-h3 {
-  font-family: Circular Std;
-  font-size: 25px;
-  line-height: 2rem;
-  letter-spacing: 0.5px;
-  color: #334798;
-  font-weight: 400;
-}
-
-h2 {
-  font-family: Larish Neue;
-  font-size: 3rem;
-  color: #334798;
-}
-
-h1 {
-  font-family: Larish Neue;
-  font-size: 4rem;
-  color: #334798;
-}
-
-.body-section {
-  font-family: Circular Std;
-  font-size: 20px;
-  line-height: 28px;
-  letter-spacing: 0.48px;
-  color: #334798;
-}
-
-section {
-  height: 70vh;
-  min-height: min-content;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1fr;
+  button {
+    font-family: Larish Neue;
+    font-size: 18px;
+    letter-spacing: 0.54px;
+    color: #ffffff;
+    background-color: #334798;
+    border: 0px;
+    border-radius: 100px;
+    padding: 1em 3em;
+    margin-top: 1em;
+    transition: ease-in 0.2s;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
 }
 
 .illustration {
@@ -114,41 +94,59 @@ section {
 .pitch {
   grid-column: 1 / 7;
   grid-row: 2;
-  h1 {
-    margin: 1rem 0rem;
-  }
-  h2 {
-    margin: 2rem 0 1.5rem 0;
-  }
-  h3 {
-    width: 66%;
-    margin: 1rem 0rem;
-  }
 }
+
+// end LAYOUT
+
+// start TYPOGRAPHY
+h1 {
+  font-family: Larish Neue;
+  font-size: 4rem;
+  color: #334798;
+  margin: 1rem 0rem;
+}
+
+h2 {
+  font-family: Larish Neue;
+  font-size: 3rem;
+  color: #334798;
+  margin: 2rem 0 1.5rem 0;
+}
+h3 {
+  font-family: Circular Std;
+  font-size: 25px;
+  line-height: 2rem;
+  letter-spacing: 0.5px;
+  color: #334798;
+  font-weight: 400;
+  margin: 1rem 0rem;
+}
+
+.body-section {
+  font-family: Circular Std;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.48px;
+  color: #334798;
+}
+// END TYPOGRAPHY
 
 @media screen and (min-width: 768px) {
   #mainMenu {
     display: none;
-  }
-  section {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 100%;
   }
 
   section {
     height: 70vh;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
     .pitch {
       grid-column: 1 / 8;
       grid-row: 1;
-      h1 {
-        margin: 1rem 0rem;
-      }
+      h1,
       h3 {
-        width: 66%;
         margin: 1rem 0rem;
       }
     }
@@ -158,41 +156,20 @@ section {
       object-fit: cover;
     }
   }
-  h3 {
-    font-family: Circular Std;
-    font-size: 25px;
-    line-height: 32px;
-    letter-spacing: 0.5px;
-    color: #334798;
-    font-weight: 400;
-  }
-  h2 {
-    font-family: Larish Neue;
-    font-size: 40px;
-    color: #334798;
-  }
-  h1 {
-    font-family: Larish Neue;
-    font-size: 69px;
-    color: #334798;
-  }
   .cta {
     display: block;
-  }
-  .button + span {
-    margin: 0rem 1rem;
-    font-size: 12px;
-    color: #334798;
-  }
-  .button:hover {
-    transform: scale(1.1);
-    transition: ease-in 0.2s;
-    cursor: pointer;
+    button + span {
+      margin: 0rem 1rem;
+      font-size: 12px;
+    }
   }
 }
 @media screen and (min-width: 1200px) {
   .contentSpace {
     margin: auto;
+  }
+  .pitch h3 {
+    width: 66%;
   }
 }
 </style>
