@@ -134,10 +134,6 @@ section {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 100%;
   }
-  .contentSpace {
-    max-width: 1200px;
-    margin: auto;
-  }
 
   section {
     height: 70vh;
@@ -192,6 +188,11 @@ section {
     transform: scale(1.1);
     transition: ease-in 0.2s;
     cursor: pointer;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contentSpace {
+    margin: auto;
   }
 }
 </style>

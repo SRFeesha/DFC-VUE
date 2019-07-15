@@ -70,21 +70,25 @@ export default {
 .illustration {
   grid-column: 1 / 13;
   grid-row: 1;
-  padding-top: 50vh;
+  /* padding-top: 50vh; */
   opacity: 0.5;
 }
 
 .pitch {
   grid-column: 1 / 10;
   z-index: 1;
+  grid-row: 2;
+  margin-top: -40vh;
 }
 
 @media screen and (min-width: 768px) {
   .pitch {
-    grid-column: 1 / 8;
+    grid-column: 1 / 4;
+    margin-top: 0;
+    grid-row: 1;
   }
   .illustration {
-    grid-column: 6 / 13;
+    grid-column: 4 / 7;
   }
 }
 </style>
