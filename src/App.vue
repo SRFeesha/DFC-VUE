@@ -27,14 +27,15 @@ body {
   margin: 0;
   background-color: #f1cfda;
 }
+
 #app {
-  // font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-family: Circular Std, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #334798;
   margin-top: 10vh;
 }
+
 .contentSpace {
   max-width: 1200px;
   margin: 1rem;
@@ -61,10 +62,6 @@ button {
   border-radius: 100px;
   padding: 1em 3em;
   margin-top: 1em;
-  // & + span {
-  // display: block;
-  // text-align: center;
-  // }
 }
 
 h3 {
@@ -75,11 +72,13 @@ h3 {
   color: #334798;
   font-weight: 400;
 }
+
 h2 {
   font-family: Larish Neue;
   font-size: 3rem;
   color: #334798;
 }
+
 h1 {
   font-family: Larish Neue;
   font-size: 4rem;
@@ -102,19 +101,24 @@ section {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 1fr;
 }
+
 .illustration {
   grid-column: 1 / 7;
-  grid-row: 2;
+  grid-row: 1;
   object-fit: cover;
   img {
     max-width: 100%;
   }
 }
+
 .pitch {
   grid-column: 1 / 7;
-  grid-row: 1;
+  grid-row: 2;
   h1 {
     margin: 1rem 0rem;
+  }
+  h2 {
+    margin: 2rem 0 1.5rem 0;
   }
   h3 {
     width: 66%;

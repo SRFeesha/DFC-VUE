@@ -47,7 +47,7 @@ p {
 .social {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  justify-items: end;
+  justify-items: start;
   line-height: 48px;
 }
 a {

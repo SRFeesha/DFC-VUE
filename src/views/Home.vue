@@ -68,10 +68,6 @@
       </div>
     </section>
 
-    <!-- <section id="sponsor">
-      <h2>Proudly sponsored by</h2>
-    </section>-->
-
     <section id="social">
       <div class="illustration">
         <img src="../assets/illustration_05_feedback.png" alt="Share your ideas" />
@@ -99,34 +95,6 @@
       </div>
     </section>
 
-    <!-- <section id="faq">
-      <h2>Frequently Asked Questions</h2>
-      <div>
-        <h4>What's the meetup about?</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Is the event open to designers only?</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Where do I book?</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Is the meetup completely free?</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Who partecipates at these meetups?</h4>
-        <p></p>
-      </div>
-      <div>
-        <h4>Can I speak at the next event?</h4>
-        <p></p>
-      </div>
-    </section>-->
-
     <Footer></Footer>
   </div>
 </template>
@@ -142,62 +110,48 @@ export default {
   padding: 2rem 0rem 2rem 0rem;
   .pitch {
     grid-column: 1 / 7;
-    grid-row: 2;
     h3 {
       width: 100%;
     }
   }
   .illustration {
     grid-column: 1 / 7;
-    grid-row: 1;
   }
 }
+
 #whoWeAre {
   padding: 8rem 0rem 2rem 0rem;
   height: 50vh;
-  .pitch {
-    grid-column: 1 / 7;
-    grid-row: 2;
-    h2 {
-      margin: 0 0 1.5rem 0;
-    }
+  .h2 {
+    margin: 0 0 1.5rem 0;
   }
   .illustration {
-    grid-column: 1/7;
-    grid-row: 1;
+    padding-bottom: 3rem;
   }
 }
+
 #joinUs {
   padding: 8rem 0rem 2rem 0rem;
   place-items: center center;
   .pitch {
-    grid-column: 1 / 6;
-    grid-row: 1;
     h2 {
-      margin: 0 0 1.5rem 0;
-      width: 66%;
+      margin: 2rem 0 1.5rem 0;
     }
   }
-  .illustration {
+}
+
+#social {
+  // place-items: center center;
+  .pitch {
     grid-column: 1 / 7;
     grid-row: 2;
   }
-}
-// #sponsor {
-//   background-color: #334798;
-//   width: 100vw;
-//   margin-left: calc((100vw - 1200px) / -2);
-// }
-#social {
-  place-items: center center;
-  .pitch {
-    grid-column: 7/13;
-    padding: 0 0 0 4rem;
-  }
   .illustration {
-    grid-column: 1/7;
+    grid-column: 1 / 7;
+    grid-row: 1;
   }
 }
+
 .grid-interests {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -207,19 +161,23 @@ export default {
   padding: 3rem 0 0 0;
   font-size: 12px;
 }
+
 .social-link {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 2rem 0 0 1rem;
 }
+
 @media screen and (min-width: 768px) {
   #hero {
     padding: 5rem 0rem 2rem 0rem;
   }
+
   section {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 100%;
   }
+
   #hero {
     padding: 8rem 0rem 2rem 0rem;
     .pitch {
@@ -231,6 +189,7 @@ export default {
       grid-row: 1;
     }
   }
+
   #whoWeAre {
     padding: 8rem 0rem 2rem 0rem;
     height: 50vh;
@@ -243,8 +202,10 @@ export default {
     }
     .illustration {
       grid-column: 1/8;
+      padding-bottom: 0;
     }
   }
+
   #joinUs {
     padding: 8rem 0rem 2rem 0rem;
     place-items: center center;
@@ -257,6 +218,19 @@ export default {
     }
     .illustration {
       grid-column: 7 / 13;
+      grid-row: 1;
+    }
+  }
+
+  #social {
+    place-items: center center;
+    .pitch {
+      grid-column: 7 / 13;
+      padding: 0 0 0 4rem;
+      grid-row: 1;
+    }
+    .illustration {
+      grid-column: 1 / 7;
       grid-row: 1;
     }
   }

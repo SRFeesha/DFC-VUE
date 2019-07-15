@@ -46,7 +46,7 @@ export default {
         },
         {
           id: 3,
-          text: "FreaksBoard",
+          text: "Suggestion",
           page: "/freaksboard"
         }
       ]

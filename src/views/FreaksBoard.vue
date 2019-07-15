@@ -36,7 +36,9 @@ h1 {
   flex-direction: row;
   flex-wrap: nowrap;
   /* justify-content: space-around; */
+  padding: 3rem 1rem;
   align-self: baseline;
-  margin: 3rem;
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 </style>

@@ -38,7 +38,7 @@ In src code is divided like this
 
     .
     ├── src
-    │	├── assets                  # all the assets used in the project
+    │   ├── assets                  # all the assets used in the project
     │	│	├─ fonts
     │	│   └─ images
     │	├── components              # single-file components
