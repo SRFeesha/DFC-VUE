@@ -83,12 +83,12 @@ export default {
 
 @media screen and (min-width: 768px) {
   .pitch {
-    grid-column: 1 / 4;
+    grid-column: 1 / 8;
     margin-top: 0;
     grid-row: 1;
   }
   .illustration {
-    grid-column: 4 / 7;
+    grid-column: 7 / 13;
   }
 }
 </style>
