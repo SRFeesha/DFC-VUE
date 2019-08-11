@@ -5,71 +5,6 @@ import { db } from "@/main";
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-  // state: {
-  //   postits: [
-  //     {
-  //       id: 1,
-  //       board: "Improvements",
-  //       msg: "Aria condizionata pls!"
-  //     },
-  //     {
-  //       id: 2,
-  //       board: "Speakers",
-  //       msg: "Filippo Andolfatto"
-  //     },
-  //     {
-  //       id: 3,
-  //       board: "Speakers",
-  //       msg: "Paolo Spazzini"
-  //     },
-  //     {
-  //       id: 4,
-  //       board: "Argomenti",
-  //       msg: "Gradienti"
-  //     },
-  //     {
-  //       id: 5,
-  //       board: "Improvements",
-  //       msg: "più birra! 🍻"
-  //     },
-  //     {
-  //       id: 6,
-  //       board: "Improvements",
-  //       msg: "More design dollars"
-  //     },
-  //     {
-  //       id: 7,
-  //       board: "Improvements",
-  //       msg: "finire dopo le 11"
-  //     }
-  //   ],
-  //   events: [
-  //     {
-  //       id: 0,
-  //       date: "2019-01-01",
-  //       title: "Event 0",
-  //       brief: "this is a brief"
-  //     },
-  //     {
-  //       id: 1,
-  //       date: "2019-02-01",
-  //       title: "Event 1",
-  //       brief: "this is a brief"
-  //     },
-  //     {
-  //       id: 2,
-  //       date: "2019-03-01",
-  //       title: "Event 2",
-  //       brief: "this is a brief"
-  //     },
-  //     {
-  //       id: 3,
-  //       date: "2019-04-01",
-  //       title: "Event 3",
-  //       brief: "this is a brief"
-  //     }
-  //   ]
-  // },
   state: {
     postits: [
       {
@@ -90,7 +25,9 @@ const store = new Vuex.Store({
       db.collection("freaks-board")
         .add({
           board: postit.board,
-          msg: postit.msg
+          msg: postit.msg,
+          // Date.now() restituise un numero in millisecondi.utile per ordinarlo in base all'inserimento
+          inserted: Date.now()
         })
         .then(response => {
           if (response) {
@@ -100,15 +37,12 @@ const store = new Vuex.Store({
         .catch(error => {
           console.warn(error);
         });
-
-      // this.content = "";
-      // this.adding = false;
     },
 
     setPostIt: state => {
       let postits = [];
       db.collection("freaks-board")
-        .orderBy("board")
+        .orderBy("inserted")
         .onSnapshot(snapshot => {
           postits = [];
           snapshot.forEach(doc => {
@@ -122,6 +56,7 @@ const store = new Vuex.Store({
           state.postits = postits;
         });
     },
+
     deletePostIt: function(state, dbid) {
       if (dbid) {
         db.collection("freaks-board")
