@@ -1,7 +1,6 @@
 
 <template>
-  <div>
-    <div v-on-clickaway="away">
+    <div  class="divaddmore" v-on-clickaway="away">
       <!-- l'autofocus va solo alla prima volta  -->
       <p class="addmore" @click="startAdding" v-show="!adding">+ Add more</p>
       <input
@@ -15,11 +14,10 @@
         class="form-control"
       />
     </div>
-  </div>
 </template>
 
 <script>
-// vue-click-away add-on per gestire quando cliccki fuori dall'input
+// vue-click-away add-on per gestire quando clicchi fuori dall'input
 // https://github.com/simplesmiler/vue-clickaway
 import { mixin as clickaway } from "vue-clickaway";
 import { db } from "@/main";
@@ -70,6 +68,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped >
+.divaddmore {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  padding: 0.3rem;
+}
 .addmore {
   padding: 0 4rem;
   color: #0000008c;

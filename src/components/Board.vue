@@ -3,6 +3,7 @@
     <div class="title">
       <h3>{{ arg }}</h3>
     </div>
+
     <ul class="content">
       <CardMini
         v-for="postit in postitsByArg"
@@ -11,6 +12,7 @@
         :dbid="postit.dbid"
       ></CardMini>
     </ul>
+
     <Input :arg="arg"></Input>
   </div>
 </template>
@@ -69,28 +71,14 @@ h3 {
 }
 .addmore {
   padding: 0 4rem;
-  /* font-style: italic; */
   color: #0000008c;
 }
 .title {
   background: white;
-  /* border-radius: 10px 10px 0px 0px; */
-  /* border-bottom: 1px solid lightgray; */
-  /* position: fixed; */
-  width: 25vw;
-  min-width: 300px;
-  /* z-index: 1; */
-}
-/* .content {
- padding-top: 4rem; 
-} */
-.scrolling-title {
-  background: white;
-  border-radius: 10px 10px 0px 0px;
-  border-bottom: 1px solid lightgray;
-  position: fixed;
   width: 25vw;
   min-width: 300px;
   z-index: 1;
+  position: sticky;
+  top: 0;
 }
 </style>

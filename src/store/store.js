@@ -26,7 +26,7 @@ const store = new Vuex.Store({
         .add({
           board: postit.board,
           msg: postit.msg,
-          // Date.now() restituise un numero in millisecondi.utile per ordinarlo in base all'inserimento
+          // Date.now() restituise un numero in millisecondi. Utile per ordinarlo in base all'inserimento
           inserted: Date.now()
         })
         .then(response => {
