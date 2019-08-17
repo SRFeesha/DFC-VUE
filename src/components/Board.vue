@@ -63,7 +63,7 @@ ul {
   box-shadow: 0px 10px 60px 0px rgba(36, 36, 40, 0.25);
   background-color: white;
   margin: 1em;
-  max-height: 50vh;
+  max-height: 73vh;
   overflow-y: auto;
 }
 h3 {

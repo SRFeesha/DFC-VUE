@@ -79,18 +79,18 @@
           <br />If you have an idea, a suggestion or a feature request, please let us know! You can find us litterally everywhere.
         </p>
         <div class="social-link">
-          <div>
+          <a class="link" href="https://www.facebook.com/designfreaksclub/" target="_blank">
             <img src="../assets/icon_05_facebook.png" alt="Facebook" />
-            <p>Facebok</p>
-          </div>
-          <div>
+            <p>Facebook</p>
+          </a>
+          <a class="link" href="https://www.instagram.com/designfreaksclub/?hl=it" target="_blank">
             <img src="../assets/icon_05_instagram.png" alt="Instagram" />
             <p>Instagram</p>
-          </div>
-          <div>
+          </a>
+          <a class="link" href="#">
             <img src="../assets/icon_05_telegram.png" alt="Telegram" />
             <p>Telegram</p>
-          </div>
+          </a>
         </div>
       </div>
     </section>

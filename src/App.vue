@@ -129,6 +129,19 @@ h3 {
   letter-spacing: 0.48px;
   color: #334798;
 }
+
+a {
+  text-decoration: none;
+  /* margin-right: 2.5rem; */
+  font-weight: 400;
+  &.link {
+    color: #334798;
+  }
+  &.link-inverse {
+    color: #f1cfda;
+  }
+}
+
 // END TYPOGRAPHY
 
 @media screen and (min-width: 768px) {
