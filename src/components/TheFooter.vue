@@ -3,8 +3,16 @@
     <h3 class="title">Design Freaks Club ©</h3>
     <p>Design freaks club is a monthly meetup in the community of Trento. We talk about anything-design, photography, marketing. You can join our event here:</p>
     <div class="social">
-      <a class="link-inverse" href="https://www.facebook.com/designfreaksclub/" target="_blank">Facebook</a>
-      <a class="link-inverse" href="https://www.instagram.com/designfreaksclub/?hl=it" target="_blank">Instagram</a>
+      <a
+        class="link-inverse"
+        href="https://www.facebook.com/designfreaksclub/"
+        target="_blank"
+      >Facebook</a>
+      <a
+        class="link-inverse"
+        href="https://www.instagram.com/designfreaksclub/?hl=it"
+        target="_blank"
+      >Instagram</a>
       <a class="link-inverse" href>Telegram</a>
     </div>
   </footer>

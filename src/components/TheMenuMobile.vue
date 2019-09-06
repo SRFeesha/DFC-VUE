@@ -59,7 +59,8 @@ export default {
   top: 0;
   left: 0;
   background-color: #334798;
-  overflow-x: hidden; /* hide the close button */
+  overflow-x: hidden;
+  /* hidetheclose button */
   transition: 0.3s;
 }
 

@@ -36,7 +36,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #334798;
-  margin-top: 10vh;
+  // margin-top: 10vh;
 }
 
 .contentSpace {

@@ -57,7 +57,7 @@ ul {
 .arg {
   box-sizing: border-box;
   width: 25vw;
-  min-width: 300px;
+  min-width: 250px;
   height: 100%;
   border-radius: 10px;
   box-shadow: 0px 10px 60px 0px rgba(36, 36, 40, 0.25);
@@ -65,6 +65,7 @@ ul {
   margin: 1em;
   max-height: 73vh;
   overflow-y: auto;
+  max-width: 70vw;
 }
 h3 {
   padding: 1rem 4rem;
