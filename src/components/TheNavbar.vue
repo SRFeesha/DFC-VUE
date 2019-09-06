@@ -57,19 +57,20 @@ export default {
 
 <style lang="scss">
 nav#mainMenu {
-  // box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 80px;
-  height: 10vh;
-  max-height: 100px;
-  font-weight: 500;
+  box-sizing: border-box;
+  padding: 1rem 1rem 0 1rem;
+  margin: 0 auto 2rem auto;
   background-color: rgba(241, 207, 218, 0.8);
-  padding: 1rem;
-  z-index: 99;
-  margin: 2rem auto;
   border-radius: 0 0 10px 10px;
+  height: 10vh;
+  min-height: 80px;
+  max-height: 150px;
+  font-weight: 500;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  z-index: 99;
 }
 
 .logo-box {

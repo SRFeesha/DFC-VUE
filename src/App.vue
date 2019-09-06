@@ -45,12 +45,12 @@ body {
 }
 
 section {
-  height: 70vh;
+  // height: 70vh;
   min-height: min-content;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: min-content 1fr;
   margin-bottom: 5rem;
   padding-top: 3rem;
 }
@@ -60,20 +60,23 @@ section {
   justify-content: center;
   flex-direction: column;
   margin: 2rem 0rem;
+  align-items: center;
+
   span {
     text-align: center;
     margin: 1rem 0rem;
   }
   button {
+    margin-top: 1em;
+    padding: 1em 3em;
+    border: 0px;
+    width: fit-content;
+    background-color: #334798;
+    border-radius: 100px;
+    color: #ffffff;
     font-family: Larish Neue;
     font-size: 18px;
     letter-spacing: 0.54px;
-    color: #ffffff;
-    background-color: #334798;
-    border: 0px;
-    border-radius: 100px;
-    padding: 1em 3em;
-    margin-top: 1em;
     transition: ease-in 0.2s;
     &:hover {
       transform: scale(1.1);

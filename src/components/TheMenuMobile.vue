@@ -51,6 +51,10 @@ export default {
 </script>
 
 <style scoped>
+.hamburger img {
+  opacity: 0.9;
+}
+
 .overlay {
   height: 0;
   width: 100vw;
@@ -85,7 +89,7 @@ export default {
 .overlay .nav-link {
   padding: 5vh;
   text-decoration: none;
-  font-size: 7vh;
+  font-size: 13vw;
   color: #f1cfda;
   display: block;
   transition: 0.3s;

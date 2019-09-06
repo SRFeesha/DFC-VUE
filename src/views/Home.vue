@@ -108,7 +108,6 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  place-items: center start;
   text-align: center;
   padding: 3rem 0 0 0;
   font-size: 12px;
@@ -148,6 +147,9 @@ export default {
     .illustration {
       grid-column: 1 / 8;
       // padding-bottom: 0;
+    }
+    .grid-interest {
+      place-items: center start;
     }
   }
 
