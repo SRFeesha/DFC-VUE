@@ -35,8 +35,6 @@ export default {
   },
   computed: {
     postits: function() {
-      // console.log(this.$store.state.postits);
-      // return this.$store.state.postits;
       return this.$store.getters.getPostIts;
     },
     postitsByArg: function() {
@@ -50,6 +48,13 @@ export default {
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 ul {
   list-style-type: none;
   padding: 0;

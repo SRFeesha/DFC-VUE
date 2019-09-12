@@ -1,8 +1,9 @@
 <template>
   <div class="contentSpace">
     <h1>Meetup</h1>
+    <h3>New event coming soon</h3>
     <NextEvent />
-    <hr />
+    <h2>Past Events</h2>
     <PastEvent />
     <Footer />
   </div>

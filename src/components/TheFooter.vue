@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="contentSpace">
     <h3 class="title">Design Freaks Club ©</h3>
     <p>Design freaks club is a monthly meetup in the community of Trento. We talk about anything-design, photography, marketing. You can join our event here:</p>
     <div class="social">
@@ -27,11 +27,11 @@ export default {
 
 <style scoped>
 footer {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   /* height: 40vh; */
-  height: 100%;
+  /* height: 100%; */
   min-height: 200px;
-  width: 90vw;
+  /* width: 90vw; */
   margin: auto;
   padding: 3rem;
   border-radius: 2vh 2vh 0vh 0vh;

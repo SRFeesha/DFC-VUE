@@ -26,7 +26,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped >
 li {
   box-shadow: 0px 5px 30px 0px rgba(36, 36, 40, 0.1);

@@ -2,10 +2,12 @@
   <div>
     <div class="FreaksBoard">
       <h1 class="freaky">Freaks Board</h1>
-      <div class="board">
-        <Board arg="Speakers" />
-        <Board arg="Improvements" />
-        <Board arg="Argomenti" />
+      <div class="content">
+        <div class="board">
+          <Board arg="Speakers" />
+          <Board arg="Improvements" />
+          <Board arg="Argomenti" />
+        </div>
       </div>
     </div>
   </div>
@@ -22,7 +24,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .board {
   z-index: 1;
@@ -38,19 +39,20 @@ export default {
 }
 
 h1.freaky {
-  text-align: center;
-  font-weight: 900;
-  font-size: 6rem;
-  color: #ffffffcc;
   margin: 2rem 0;
-  /* font-size: 22vh; */
   max-width: 100%;
   position: absolute;
-  top: 0vh;
+  top: 100px;
+  right: 5vw;
   z-index: 1;
+  font-weight: 900;
+  font-size: 6rem;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.2);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
+  color: #ffffffcc;
+  /* font-size: 22vh; */
+  // text-align: center;
 }
 
 Board {

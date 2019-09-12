@@ -60,17 +60,19 @@ nav#mainMenu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   padding: 1rem 1rem 0 1rem;
   margin: 0 auto 2rem auto;
-  background-color: rgba(241, 207, 218, 0.8);
+  background-color: rgba(241, 207, 218, 0.7);
   border-radius: 0 0 10px 10px;
   height: 10vh;
   min-height: 80px;
   max-height: 150px;
   font-weight: 500;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   z-index: 99;
+  backdrop-filter: blur(10px);
+  // box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.05);
 }
 
 .logo-box {

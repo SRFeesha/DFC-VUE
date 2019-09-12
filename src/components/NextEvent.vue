@@ -1,34 +1,36 @@
 <template>
-<div>
-  <h3>New event coming soon</h3>
-  <div class="nextEvent">
-    <div class="infoEvent">
-      <p>{{ date }}</p>
-      <h2>{{ title }}</h2>
-      <p>{{ resume }}</p>
-      <div class="cta">
-        <button>Get ticket</button>
+  <div class="card">
+    <div class="nextEvent">
+      <div class="infoEvent">
+        <p>{{ date }}</p>
+        <h2>{{ title }}</h2>
+        <p>{{ resume }}</p>
+        <div class="cta">
+          <button>Get ticket</button>
+        </div>
+      </div>
+      <div class="photoEvent">
+        <img
+          class="photo"
+          src="https://www.raconteur.net/wp-content/uploads/2016/12/Design-thinking-1280x720.jpg"
+          alt="Next event image"
+        />
       </div>
     </div>
-    <div class="photoEvent">
-      <img  class="photo" src="https://www.raconteur.net/wp-content/uploads/2016/12/Design-thinking-1280x720.jpg" alt="Next event image">
-    </div>
+    <div class="moreSpace"></div>
   </div>
-  <div class="moreSpace">
-  </div>
-</div>
 </template>
 
 <script>
-
 export default {
   name: "NextEvent",
   data() {
-      return {
-          date: 'November 19, 9PM',
-          title: 'Leading design',
-          resume: 'Leading Design is a conference for people leading design teams, overseeing design direction, or instilling a culture of design within their organisations.'
-      };
+    return {
+      date: "November 19, 9PM",
+      title: "Leading design",
+      resume:
+        "Leading Design is a conference for people leading design teams, overseeing design direction, or instilling a culture of design within their organisations."
+    };
   },
   props: {
     cont: String
@@ -37,6 +39,18 @@ export default {
 </script>
 
 <style lang="scss">
+.card {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.photoEvent .photo {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 @media screen and (min-width: 768px) {
   .nextEvent {
     display: grid;
@@ -46,7 +60,6 @@ export default {
     .infoEvent {
       grid-column: 2 / 3;
       padding: 0rem 2rem 0rem 2rem;
-
     }
     .photoEvent {
       grid-column: 1 / 2;
@@ -56,8 +69,8 @@ export default {
       }
     }
   }
-  h3{
-    text-align:center;
+  h3 {
+    text-align: center;
   }
 }
 </style>

@@ -6,6 +6,14 @@ import Schedule from '../views/Schedule';
 import Meetup from '../views/Meetup';
 import FreaksBoard from '../views/FreaksBoard';
 
+const scrollBehavior = function(to, from, savedPosition) {
+  if (savedPosition) {
+    return savedPosition;
+  } else {
+    return { x: 0, y: 0 };
+  }
+};
+
 const routes = [
   {
     path: '/',
@@ -31,7 +39,8 @@ const routes = [
 
 const router = new VueRouter({
   routes: routes,
-  mode: 'history'
+  mode: 'history',
+  scrollBehavior
 });
 
 export default router;
