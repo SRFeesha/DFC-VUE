@@ -16,10 +16,10 @@
       </div>
     </div>
 
-    <div class="photoEvent frame">
-      <img class="photo" :src="img" alt="Next event image" />
+    <div class="photoEvent frame" :style="{ backgroundImage: `url(${img})` }">
+      <!-- <img class="photo" :src="img" alt="Next event image" /> -->
+      <!-- <div :style="{ backgroundImage: `url(${img})` }"></div> -->
     </div>
-    <!-- </div> -->
   </div>
 </template>
 

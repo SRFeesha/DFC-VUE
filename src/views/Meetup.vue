@@ -62,14 +62,16 @@ h2 {
   height: 200px;
   /* background-size: fill; */
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.01), 0 5px 15px rgba(0, 0, 0, 0.05);
+  background-position: center;
+  background-size: cover;
 }
 
-.frame .photo {
+/* .frame .photo {
   position: absolute;
   top: 0px;
   width: 200%;
   left: -50%;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .grid {

@@ -2,8 +2,8 @@
   <div>
     <div class="card" @click="showPastEvent">
       <router-link :to="{ name: 'pastEventDetail', params: {eventName: event} }">
-        <div class="frame">
-          <img :src="img" class="photo" />
+        <div class="frame" :style="{ backgroundImage: `url(${img})` }">
+          <!-- <img :src="img" class="photo" /> -->
         </div>
         <h3>{{ title }}</h3>
         <!-- <p class="short-desc line-clamp">{{ shortDesc }}</p> -->
