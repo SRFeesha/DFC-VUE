@@ -1,14 +1,14 @@
 <template>
-  <div class="contentSpace" :class="{ noScroll: $store.state.isModalVisible }">
+  <div class="contentSpace">
     <h1>Meetup</h1>
+
     <h3>New event coming soon</h3>
     <NextEvent />
-    <h2>Past Events</h2>
 
+    <h2>Past Events</h2>
     <div class="grid">
       <PastEvent v-for="event in events" v-bind:key="event.id" :event="event" />
     </div>
-    <!-- <Modal v-if="this.$store.state.isModalVisible" /> -->
 
     <Footer />
   </div>
@@ -17,14 +17,12 @@
 <script>
 import NextEvent from "../components/NextEvent";
 import PastEvent from "../components/PastEvent";
-// import Modal from "../components/Modal";
 
 export default {
-  name: "Meetup", //this is the name of the component
+  name: "Meetup",
   components: {
     NextEvent,
     PastEvent
-    // Modal
   },
   data() {
     return {

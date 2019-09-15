@@ -82,7 +82,7 @@ h3 {
 .title {
   background: white;
   width: 25vw;
-  min-width: 300px;
+  /* min-width: 300px; */
   z-index: 1;
   position: sticky;
   top: 0;

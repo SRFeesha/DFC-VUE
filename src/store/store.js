@@ -13,12 +13,15 @@ const store = new Vuex.Store({
         msg: 'Aria condizionata pls!'
       }
     ],
-    events: null,
-    isModalVisible: false,
-    modalTitle: '',
-    modalDesc: '',
-    modalFooter: '',
-    modalImg: ''
+    events: [
+      {
+        events: null,
+        title: '',
+        desc: '',
+        shortDesc: '',
+        img: ''
+      }
+    ]
   },
   getters: {
     getPostIts: state => {
@@ -78,26 +81,17 @@ const store = new Vuex.Store({
       }
     },
 
-    showModal: function(state, modal) {
-      state.isModalVisible = true;
-      state.modalDesc = modal.desc;
-      state.modalFooter = modal.img;
-      state.modalTitle = modal.title;
-
-      // console.log(document.body.scrollTop);
-      // document.body.style.height = '100vh';
-      // document.body.style.position = 'fixed';
-    },
-
-    closeModal: function(state) {
-      state.isModalVisible = false;
-
-      // const top = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.height = '';
-
-      console.log(document.body.style.top);
+    showPastEvent: function(state, modal) {
+      // state.isModalVisible = true;
+      state.events.img = modal.img;
+      state.events.title = modal.title;
+      state.events.shortDesc = modal.shortdesc;
+      state.events.desc = modal.desc;
     }
+
+    // closeModal: function(state) {
+    //   state.isModalVisible = false;
+    // }
   },
   actions: {
     setPostIt: context => {
@@ -110,16 +104,12 @@ const store = new Vuex.Store({
       context.commit('addPostIt');
     },
 
-    showModal: context => {
-      context.commit('showModal');
-    },
-    closeModal: context => {
-      const top = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      context.commit('closeModal');
+    showPastEvent: context => {
+      context.commit('showPastEvent');
     }
+    // closeModal: context => {
+    //   context.commit('closeModal');
+    // }
   }
 });
 

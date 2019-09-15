@@ -1,13 +1,11 @@
 <template>
-  <!-- <div class="contentSpace card"> -->
   <div class="contentSpace">
     <div class="card">
-      <h1>{{ $store.state.modalTitle }}</h1>
+      <h1>{{ $store.state.events.title }}</h1>
 
-      <div class="content" v-html="$store.state.modalDesc"></div>
+      <div class="content" v-html="$store.state.events.desc"></div>
     </div>
   </div>
-  <!-- </div> -->
 </template>
 
 <script>

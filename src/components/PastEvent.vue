@@ -1,13 +1,13 @@
 <template>
-  <!-- <div class="card" @click="openCard" :class="{open : isOpen}"> -->
   <div>
-    <div class="card" @click="showModal">
+    <div class="card" @click="showPastEvent">
       <router-link :to="{ name: 'pastEventDetail', params: {eventName: event} }">
         <div class="frame">
           <img :src="img" class="photo" />
         </div>
         <h3>{{ title }}</h3>
-        <p class="short-desc line-clamp">{{ shortDesc }}</p>
+        <!-- <p class="short-desc line-clamp">{{ shortDesc }}</p> -->
+        <div class="short-desc line-clamp" v-html="shortDesc"></div>
       </router-link>
     </div>
   </div>
@@ -22,6 +22,7 @@ export default {
       shortDesc:
         "this event was fire!!! you should've been here man, where you at?!?",
       img: "",
+      desc: "",
       token: "GGAQ2BUKIRGJMZMU55YZ"
     };
   },
@@ -37,23 +38,28 @@ export default {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        let event = data;
-        this.title = event.name.text;
-        this.date = event.start.local;
-        this.shortDesc = event.description.html;
-        this.img = event.logo.original.url;
+        // console.log(data);
+        this.title = data.name.text;
+        this.date = data.start.local;
+        this.shortDesc = data.summary;
+        this.desc = data.description.html;
+        this.img = data.logo.original.url;
       });
   },
   methods: {
-    showModal() {
-      this.$store.commit("showModal", {
+    showPastEvent() {
+      this.$store.commit("showPastEvent", {
+        img: this.img,
         title: this.title,
-        desc: this.shortDesc
+        shortDesc: this.shortDesc,
+        desc: this.desc
       });
     }
   }
 };
 </script>
+
+
 
 <style lang="scss" scoped>
 .card {
