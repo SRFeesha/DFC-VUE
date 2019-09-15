@@ -71,16 +71,23 @@ section {
     padding: 1em 3em;
     border: 0px;
     width: fit-content;
+    height: 48px;
     background-color: #334798;
     border-radius: 100px;
-    color: #ffffff;
-    font-family: Larish Neue;
-    font-size: 18px;
-    letter-spacing: 0.54px;
+    // color: #ffffff;
+    // font-family: Larish Neue;
+    // font-size: 18px;
+    // letter-spacing: 0.54px;
     transition: ease-in 0.2s;
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
+    }
+    a {
+      color: #ffffff;
+      font-family: Larish Neue;
+      font-size: 18px;
+      letter-spacing: 0.54px;
     }
   }
 }

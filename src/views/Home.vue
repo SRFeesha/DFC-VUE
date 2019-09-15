@@ -5,7 +5,12 @@
         <h1>A creative meetup</h1>
         <h3>We are calling out for Visual, UI/UX, and Interaction Design enthusiasts in the Trento community</h3>
         <div class="cta">
-          <button>Join meetup</button>
+          <button>
+            <a
+              href="https://www.eventbrite.com/e/specktech-retreat-v2-tickets-67052270145"
+              target="_blank"
+            >Join meetup</a>
+          </button>
           <span>Go on, it's free!</span>
         </div>
       </div>
@@ -59,7 +64,11 @@
           class="body-section"
         >Events include talks from guest speakers on topics around design, photography and professional arts, networking opportunities, dynamic workshop and a good old-fashioned chin-wag over a beer or two.</p>
         <div class="cta">
-          <button>Join meetup</button>
+          <button>
+            <a
+              href="https://www.eventbrite.com/e/specktech-retreat-v2-tickets-67052270145"
+            >Join meetup</a>
+          </button>
           <span>Go on, it's free!</span>
         </div>
       </div>

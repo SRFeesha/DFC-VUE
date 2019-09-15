@@ -10,7 +10,9 @@
       <h2>{{ title }}</h2>
       <div class="line-clamp">{{ resume }}</div>
       <div class="cta">
-        <button>Get ticket</button>
+        <button>
+          <a :href="link" target="_blank">Get ticket</a>
+        </button>
       </div>
     </div>
 
@@ -27,6 +29,7 @@ export default {
   data() {
     return {
       loading: true,
+      link: "",
       img: "",
       date: "November 19, 9PM",
       title: "",
@@ -49,7 +52,8 @@ export default {
       .then(response => response.json())
       .then(data => {
         let event = data.events[0];
-
+        console.log(data);
+        this.link = event.url;
         this.title = event.name.text;
         this.date = event.start.local;
         this.resume = event.description.text;
