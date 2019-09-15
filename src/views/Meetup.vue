@@ -1,5 +1,5 @@
 <template>
-  <div class="contentSpace">
+  <div class="contentSpace" :class="{ noScroll: $store.state.isModalVisible }">
     <h1>Meetup</h1>
     <h3>New event coming soon</h3>
     <NextEvent />
@@ -8,6 +8,8 @@
     <div class="grid">
       <PastEvent v-for="event in events" v-bind:key="event.id" :event="event" />
     </div>
+    <!-- <Modal v-if="this.$store.state.isModalVisible" /> -->
+
     <Footer />
   </div>
 </template>
@@ -15,12 +17,14 @@
 <script>
 import NextEvent from "../components/NextEvent";
 import PastEvent from "../components/PastEvent";
+// import Modal from "../components/Modal";
 
 export default {
   name: "Meetup", //this is the name of the component
   components: {
     NextEvent,
     PastEvent
+    // Modal
   },
   data() {
     return {
@@ -29,6 +33,7 @@ export default {
   }
 };
 </script>
+
 <style>
 h2 {
   margin-top: 3em;
@@ -36,7 +41,7 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
 }
 
 .line-clamp {
@@ -47,7 +52,6 @@ h2 {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   min-height: min-content;
-
   max-width: 600px;
 }
 
@@ -64,8 +68,21 @@ h2 {
 
 .frame .photo {
   position: absolute;
-  top: -30px;
-  /* background-size: contain; */
-  width: 100%;
+  top: 0px;
+  width: 200%;
+  left: -50%;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .frame .photo {
+    position: absolute;
+    top: -30%;
+    /* background-size: contain; */
+    width: 100%;
+    left: 0;
+  }
 }
 </style>

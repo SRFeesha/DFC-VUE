@@ -5,6 +5,7 @@ import Home from '../views/Home';
 import Schedule from '../views/Schedule';
 import Meetup from '../views/Meetup';
 import FreaksBoard from '../views/FreaksBoard';
+import PastEventDetail from '../views/PastEventDetail';
 
 const scrollBehavior = function(to, from, savedPosition) {
   if (savedPosition) {
@@ -29,6 +30,11 @@ const routes = [
     path: '/meetup',
     name: 'Meetup',
     component: Meetup
+  },
+  {
+    path: '/past-events/:eventName',
+    name: 'pastEventDetail',
+    component: PastEventDetail
   },
   {
     path: '/freaksboard',

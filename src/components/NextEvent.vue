@@ -1,20 +1,23 @@
 <template>
-  <div class="card">
-    <div class="nextEvent">
-      <div class="infoEvent">
-        <p>{{ date }}</p>
-        <h2>{{ title }}</h2>
-        <div class="line-clamp">{{ resume }}</div>
-        <div class="cta">
-          <button>Get ticket</button>
-        </div>
-      </div>
-      <div class="photoEvent frame">
-        <img class="photo" :src="img" alt="Next event image" />
+  <!-- <div class="card"> -->
+  <div class="card nextEvent">
+    <div v-if="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="infoEvent" v-else="!loading">
+      <p>{{ date }}</p>
+      <h2>{{ title }}</h2>
+      <div class="line-clamp">{{ resume }}</div>
+      <div class="cta">
+        <button>Get ticket</button>
       </div>
     </div>
 
-    <div class="moreSpace"></div>
+    <div class="photoEvent frame">
+      <img class="photo" :src="img" alt="Next event image" />
+    </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -23,9 +26,10 @@ export default {
   name: "NextEvent",
   data() {
     return {
+      loading: true,
       img: "",
       date: "November 19, 9PM",
-      title: "Leading design",
+      title: "",
       resume:
         "Leading Design is a conference for people leading design teams, overseeing design direction, or instilling a culture of design within their organisations.",
       nextEvent: "10306079066",
@@ -44,13 +48,13 @@ export default {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         let event = data.events[0];
 
         this.title = event.name.text;
         this.date = event.start.local;
         this.resume = event.description.text;
         this.img = event.logo.original.url;
+        this.loading = false;
       });
   }
 };
@@ -76,13 +80,57 @@ export default {
   max-width: 100%;
   object-fit: contain;
 }
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #334798;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 500ms infinite ease-in-out;
+  animation: sk-scaleout 500ms infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 
 @media screen and (min-width: 768px) {
   .nextEvent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 100%;
-    padding: 3rem 0rem 6rem 0rem;
+    padding: 3rem 3rem 6rem 3rem;
+    margin: 3rem;
     .infoEvent {
       grid-column: 2 / 3;
       padding: 0rem 2rem 0rem 2rem;

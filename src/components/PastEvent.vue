@@ -1,10 +1,15 @@
 <template>
-  <div class="card">
-    <div class="frame">
-      <img :src="img" class="photo" />
+  <!-- <div class="card" @click="openCard" :class="{open : isOpen}"> -->
+  <div>
+    <div class="card" @click="showModal">
+      <router-link :to="{ name: 'pastEventDetail', params: {eventName: event} }">
+        <div class="frame">
+          <img :src="img" class="photo" />
+        </div>
+        <h3>{{ title }}</h3>
+        <p class="short-desc line-clamp">{{ shortDesc }}</p>
+      </router-link>
     </div>
-    <h3>{{ title }}</h3>
-    <p class="short-desc line-clamp">{{ shortDesc }}</p>
   </div>
 </template>
 
@@ -35,9 +40,17 @@ export default {
         let event = data;
         this.title = event.name.text;
         this.date = event.start.local;
-        this.shortDesc = event.description.text;
+        this.shortDesc = event.description.html;
         this.img = event.logo.original.url;
       });
+  },
+  methods: {
+    showModal() {
+      this.$store.commit("showModal", {
+        title: this.title,
+        desc: this.shortDesc
+      });
+    }
   }
 };
 </script>
@@ -58,4 +71,14 @@ h3 {
 .short-desc {
   -webkit-line-clamp: 4;
 }
+
+.open {
+  position: absolute;
+  top: 10px;
+}
+// .open::after {
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: black;
+// }
 </style>
