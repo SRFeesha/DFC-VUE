@@ -7,7 +7,7 @@
 
     <h2>Past Events</h2>
     <div class="grid">
-      <PastEvent v-for="event in events" v-bind:key="event.id" :event="event" />
+      <PastEvent v-for="event in events" :key="event.id" :event="event" />
     </div>
 
     <Footer />

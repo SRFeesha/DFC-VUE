@@ -15,11 +15,11 @@ const store = new Vuex.Store({
     ],
     events: [
       {
-        events: null,
-        title: '',
-        desc: '',
-        shortDesc: '',
-        img: ''
+        // events: null,
+        // title: '',
+        // desc: '',
+        // shortDesc: '',
+        // img: ''
       }
     ]
   },
@@ -81,17 +81,12 @@ const store = new Vuex.Store({
       }
     },
 
-    showPastEvent: function(state, modal) {
-      // state.isModalVisible = true;
-      state.events.img = modal.img;
-      state.events.title = modal.title;
-      state.events.shortDesc = modal.shortdesc;
-      state.events.desc = modal.desc;
+    showPastEvent: function(state, event) {
+      state.events.title = event.title;
+      state.events.shortDesc = event.shortdesc;
+      state.events.desc = event.desc;
+      state.events.img = event.img;
     }
-
-    // closeModal: function(state) {
-    //   state.isModalVisible = false;
-    // }
   },
   actions: {
     setPostIt: context => {
@@ -107,9 +102,6 @@ const store = new Vuex.Store({
     showPastEvent: context => {
       context.commit('showPastEvent');
     }
-    // closeModal: context => {
-    //   context.commit('closeModal');
-    // }
   }
 });
 

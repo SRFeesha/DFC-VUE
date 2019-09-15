@@ -2,6 +2,9 @@
   <div>
     <div class="card" @click="showPastEvent">
       <router-link :to="{ name: 'pastEventDetail', params: {eventName: event} }">
+        <div v-if="loading">
+          <div class="spinner"></div>
+        </div>
         <div class="frame" :style="{ backgroundImage: `url(${img})` }">
           <!-- <img :src="img" class="photo" /> -->
         </div>
@@ -18,6 +21,7 @@ export default {
   name: "PastEvent",
   data() {
     return {
+      loading: true,
       title: "event -1",
       shortDesc:
         "this event was fire!!! you should've been here man, where you at?!?",
@@ -44,6 +48,7 @@ export default {
         this.shortDesc = data.summary;
         this.desc = data.description.html;
         this.img = data.logo.original.url;
+        this.loading = false;
       });
   },
   methods: {
