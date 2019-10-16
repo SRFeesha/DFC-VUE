@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/67be03f4-7efa-41cb-b55a-57823ccea95e/deploy-status)](https://app.netlify.com/sites/dieffecci/deploys)
+
 # The project
 
 Design Freaks Club is a monthly meetup in the community of Trento.
