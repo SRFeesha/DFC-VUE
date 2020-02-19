@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/67be03f4-7efa-41cb-b55a-57823ccea95e/deploy-status)](https://app.netlify.com/sites/dieffecci/deploys)
-
 # The project
 
 Design Freaks Club is a monthly meetup in the community of Trento.
@@ -10,11 +8,6 @@ We talk about anything-design, photography, marketing.
 The project is trying to make some noise in Trento design panorama with a _disruptive approach_.
 The Design field is evolving and cutting its space all around the world, it's time to bring this change also in the Trento community.
 
-The first event will be on 8th of October.
-
-[Our Facebook Page](https://www.facebook.com/designfreaksclub/)
-
-[Our Instagram Page](https://www.instagram.com/designfreaksclub/)
 
 ## Build setup
 
@@ -31,6 +24,7 @@ The first event will be on 8th of October.
         npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
 
 ### Folder structure
 
